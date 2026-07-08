@@ -1,0 +1,612 @@
+/* ============================================================
+   CUATRO TRAZOS — Hoja de Estilos Principal
+   Arquitectura · Diseño · Ejecución
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. VARIABLES GLOBALES (Design Tokens)
+   ------------------------------------------------------------ */
+:root {
+  --bg-primary:        #FAF8F5;
+  --bg-secondary:      #F5F0EB;
+  --text-primary:      #1A1A1A;
+  --text-secondary:    #6B6560;
+  --accent:            #C8A98F;
+  --accent-hover:      #B08F73;
+  --dark-bg:           #1E1E1E;
+  --dark-text:         #FFFFFF;
+  --dark-muted:        #A8A8A8;
+  --divider:           #E5E0DB;
+  --transition:        0.3s ease;
+}
+
+/* ------------------------------------------------------------
+   2. RESET Y BASE
+   ------------------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+  /* Compensa la altura de la navbar fija al navegar a anclas */
+  scroll-padding-top: 5rem;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 6rem;
+  }
+}
+
+/* Respeta la preferencia del usuario de reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .btn-lift:hover,
+  .btn-primary:hover {
+    transform: none !important;
+  }
+}
+
+body {
+  font-family: 'Manrope', system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ------------------------------------------------------------
+   3. NAVBAR
+   ------------------------------------------------------------ */
+
+/* Estado base: siempre fija en la parte superior, nunca se oculta */
+#navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 9999 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: background-color 0.5s ease,
+              box-shadow 0.5s ease,
+              border-color 0.5s ease;
+  /* Forzar GPU compositing para evitar que desaparezca en scroll móvil */
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  transform: translate3d(0, 0, 0) !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
+  will-change: transform;
+}
+
+/* Textos e iconos de la navbar en BLANCO para todos los tamaños de pantalla */
+#navbar,
+#navbar a,
+#navbar span,
+#navbar svg,
+#navbar .text-soft-black,
+#navbar .text-warm-gray {
+  color: #FFFFFF !important;
+}
+
+  /* Móvil: fondo café sólido siempre visible */
+  @media (max-width: 1023px) {
+    #navbar {
+      background-color: #C8A98F !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    #navbar.navbar-scrolled {
+      background-color: #B08F73 !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    /* Botón hamburguesa: blanco con icono café, FIJADO en esquina superior derecha */
+    #mobile-menu-btn {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 10px !important;
+      color: #B08F73 !important;
+      background-color: #FFFFFF !important;
+      border: 2px solid #FFFFFF !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+      position: fixed !important;
+      top: 16px !important;
+      right: 16px !important;
+      z-index: 10000 !important;
+      -webkit-tap-highlight-color: transparent;
+      /* Forzar GPU compositing para evitar que desaparezca en scroll móvil */
+      -webkit-transform: translate3d(0, 0, 0) !important;
+      transform: translate3d(0, 0, 0) !important;
+      -webkit-backface-visibility: hidden !important;
+      backface-visibility: hidden !important;
+      will-change: transform;
+    }
+
+    #mobile-menu-btn:active {
+      background-color: #F5F0EB !important;
+      transform: scale(0.95) translate3d(0, 0, 0) !important;
+    }
+
+    /* Animación sutil para llamar la atención al botón de menú */
+    @keyframes menuPulse {
+      0%, 100% { transform: scale(1) translate3d(0, 0, 0); }
+      50% { transform: scale(1.08) translate3d(0, 0, 0); }
+    }
+
+    #mobile-menu-btn {
+      animation: menuPulse 2s ease-in-out 1s 2;
+    }
+  }
+
+/* Desktop: transparente al inicio, café tenue al hacer scroll */
+@media (min-width: 1024px) {
+  #navbar {
+    background-color: transparent !important;
+  }
+
+  #navbar.navbar-scrolled {
+    background-color: rgba(176, 143, 115, 0.92) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+}
+
+/* ------------------------------------------------------------
+   4. ANIMACIONES — Scroll Reveal
+   ------------------------------------------------------------ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger de hijos con delay escalonado */
+.stagger-children .reveal {
+  transition-delay: calc(var(--i, 0) * 0.12s);
+}
+
+/* ------------------------------------------------------------
+   5. GALERÍA — Carousel Horizontal
+   ------------------------------------------------------------ */
+.gallery-scroll {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 0.5rem;
+}
+
+.gallery-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-item {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* Scrollbar personalizado en desktop */
+@media (min-width: 1024px) {
+  .gallery-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--divider) transparent;
+  }
+
+  .gallery-scroll::-webkit-scrollbar {
+    display: block;
+    height: 4px;
+  }
+
+  .gallery-scroll::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .gallery-scroll::-webkit-scrollbar-thumb {
+    background: var(--divider);
+    border-radius: 2px;
+  }
+}
+
+/* ------------------------------------------------------------
+   6. COMPONENTES — Botones
+   ------------------------------------------------------------ */
+
+/* Estilo base unificado para todos los botones CTA */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--accent);       /* #C8A98F café tenue */
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  padding: 0.75rem 1.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition),
+              transform var(--transition),
+              box-shadow var(--transition);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);  /* #B08F73 café oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 169, 143, 0.3);
+}
+
+/* Botón HABLEMOS de la navbar — café con letras blancas */
+.btn-navbar {
+  background-color: #C8A98F !important;
+  color: #FFFFFF !important;
+}
+
+.btn-navbar:hover {
+  background-color: #B08F73 !important;
+}
+
+/* Efecto lift para botones con clase btn-lift */
+.btn-lift {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              background-color var(--transition),
+              border-color var(--transition);
+}
+
+.btn-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(200, 169, 143, 0.25);
+}
+
+/* ------------------------------------------------------------
+   7. COMPONENTES — Imágenes con Zoom
+   ------------------------------------------------------------ */
+.img-zoom {
+  overflow: hidden;
+}
+
+.img-zoom img {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+  transform: scale(1.04);
+}
+
+/* ------------------------------------------------------------
+   8. COMPONENTES — Línea Conectora de Proceso
+   ------------------------------------------------------------ */
+.process-connector::after {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  width: 100%;
+  height: 1px;
+  background: var(--divider);
+  z-index: 0;
+}
+
+.process-step:last-child .process-connector::after {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   9. COMPONENTES — Links con Subrayado Animado
+   ------------------------------------------------------------ */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width var(--transition);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------
+   10. MENÚ MÓVIL
+   ------------------------------------------------------------ */
+.mobile-menu {
+  display: flex;
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+  transition: -webkit-transform 0.4s cubic-bezier(0.32, 0.72, 0, 1),
+              transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+  pointer-events: none;
+  z-index: 9998 !important;
+  will-change: transform;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-menu.open {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  pointer-events: auto;
+  z-index: 10001 !important;
+}
+
+/* Botón de menú hamburguesa en móvil */
+#mobile-menu-btn {
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Backdrop del menú móvil */
+.mobile-menu-backdrop {
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 9997 !important;
+}
+
+.mobile-menu-backdrop.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+
+/* En móvil muy pequeño: ajustar menú */
+@media (max-width: 374px) {
+  .mobile-menu {
+    width: 90vw !important;
+    max-width: 90vw !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   11. PARALLAX — Capas de profundidad con desplazamiento
+   ------------------------------------------------------------ */
+
+/* Imagen de fondo del hero con parallax */
+.parallax-bg {
+  position: absolute;
+  inset: -50% 0;           /* Mayor espacio para recorrido más pronunciado */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  will-change: transform;  /* Activa compositing en GPU */
+  z-index: 0;
+}
+
+/* Elemento decorativo parallax en sección contacto */
+.parallax-deco {
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200,169,143,0.06) 0%, transparent 70%);
+  will-change: transform;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Asegurar que el contenido quede sobre las capas parallax */
+#inicio > *:not(.parallax-bg) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Sombra en textos del hero para mejorar legibilidad sobre la imagen */
+#inicio h1,
+#inicio h1 span,
+#inicio p,
+#inicio strong {
+  text-shadow: 0 2px 16px rgba(250, 248, 245, 0.95), 0 1px 4px rgba(250, 248, 245, 0.9);
+}
+
+#contacto > *:not(.parallax-deco) {
+  position: relative;
+  z-index: 1;
+}
+
+/* En móvil: desactivar parallax para mejor rendimiento */
+@media (max-width: 767px) {
+  .parallax-bg {
+    inset: 0;
+    transform: none !important;
+  }
+  .parallax-deco {
+    display: none;
+  }
+}
+
+/* ------------------------------------------------------------
+   12. TRUST BAR — Sección de confianza bajo el hero
+   ------------------------------------------------------------ */
+.trust-bar {
+  width: 100%;
+}
+
+.trust-item {
+  transition: transform var(--transition),
+              box-shadow var(--transition),
+              border-color var(--transition);
+}
+
+.trust-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 169, 143, 0.15);
+  border-color: rgba(200, 169, 143, 0.45);
+}
+
+.trust-icon {
+  transition: background-color var(--transition);
+}
+
+.trust-item:hover .trust-icon {
+  background-color: rgba(200, 169, 143, 0.28) !important;
+}
+
+/* En móvil: columna única con tamaño de texto cómodo */
+@media (max-width: 639px) {
+  .trust-item {
+    padding: 0.875rem 1rem;
+  }
+  .trust-item p:first-child {
+    font-size: 0.7rem;
+  }
+  .trust-item p:last-child {
+    font-size: 0.7rem;
+  }
+}
+
+/* ------------------------------------------------------------
+   13. UTILIDADES — Accesibilidad
+   ------------------------------------------------------------ */
+
+/* Foco visible para navegación por teclado */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ------------------------------------------------------------
+   14. FLECHAS DE GALERÍA — Proyectos
+   ------------------------------------------------------------ */
+#gallery-prev,
+#gallery-next {
+  background-color: #C8A98F !important;
+  border-color: #C8A98F !important;
+  color: #FFFFFF !important;
+}
+
+#gallery-prev svg,
+#gallery-next svg {
+  stroke: #FFFFFF !important;
+}
+
+#gallery-prev:hover,
+#gallery-next:hover {
+  background-color: #B08F73 !important;
+  border-color: #B08F73 !important;
+}
+
+/* ------------------------------------------------------------
+   14. FOOTER — Forzar fondo café tenue
+   ------------------------------------------------------------ */
+footer {
+  background-color: #C8A98F !important;
+}
+
+/* ------------------------------------------------------------
+   15. BOTÓN "HABLEMOS DE TU PROYECTO" — Café sólido, letras blancas
+   ------------------------------------------------------------ */
+.js-hablemos {
+  background-color: #C8A98F !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+.js-hablemos svg {
+  stroke: #FFFFFF !important;
+}
+
+.js-hablemos:hover {
+  background-color: #B08F73 !important;
+  color: #FFFFFF !important;
+}
+
+/* ------------------------------------------------------------
+   16. BOTÓN "VER TODOS LOS PROYECTOS" — Café sólido, letras blancas
+   ------------------------------------------------------------ */
+.js-ver-todos {
+  background-color: #C8A98F !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+.js-ver-todos svg {
+  stroke: #FFFFFF !important;
+}
+
+.js-ver-todos:hover {
+  background-color: #B08F73 !important;
+  color: #FFFFFF !important;
+}
+
+/* ------------------------------------------------------------
+   15. TOAST — Globo de mensaje para "Saber Más"
+   ------------------------------------------------------------ */
+.saber-mas-toast,
+.hablemos-toast,
+.ver-todos-toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  z-index: 99999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.5rem;
+  background-color: #B08F73;
+  color: #FFFFFF;
+  font-family: 'Manrope', system-ui, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.45s cubic-bezier(0.32, 0.72, 0, 1),
+              opacity 0.35s ease;
+  max-width: min(90vw, 320px);
+  text-align: center;
+}
+
+.saber-mas-toast.visible,
+.hablemos-toast.visible,
+.ver-todos-toast.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+/* Colita del globo */
+.saber-mas-toast__tail,
+.hablemos-toast__tail,
+.ver-todos-toast__tail {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 12px;
+  height: 12px;
+  background-color: #B08F73;
+  border-radius: 2px;
+}
