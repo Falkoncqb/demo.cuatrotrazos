@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cuatro Trazos — Arquitectura · Diseño · Ejecución</title>
-  <meta name="description" content="Estudio de arquitectura y diseño de ambientes en Buenos Aires. Remodelaciones, diseño de cocinas, habilitación Airbnb y locales comerciales.">
+  <title>Cuatro Trazos — Arquitectura · Diseño</title>
+  <meta name="description" content="Estudio de arquitectura y diseño de ambientes en Santiago, Chile. Transformamos espacios con diseño innovador y profesional.">
   <meta name="robots" content="index, follow">
 
   <!-- Fuentes -->
@@ -50,31 +50,23 @@
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
       <div class="flex items-center justify-between h-20 lg:h-24">
         <!-- Logo -->
-        <a href="#inicio" class="flex flex-col group">
-          <div class="flex items-center gap-2">
-            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-soft-black">
-              <line x1="2" y1="2" x2="2" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <line x1="10" y1="2" x2="10" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <line x1="18" y1="2" x2="18" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <span class="font-serif text-lg lg:text-xl font-semibold tracking-wide text-soft-black">CUATRO TRAZOS</span>
-          </div>
-          <span class="text-[10px] lg:text-xs text-warm-gray tracking-[0.15em] uppercase font-medium mt-0.5">Arquitectura · Diseño · Ejecución</span>
+        <a href="#inicio" class="flex items-center logo-link">
+          <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos - Arquitectura y Diseño" class="logo-image">
         </a>
 
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center gap-8 xl:gap-10">
           <a href="#inicio" class="text-sm font-medium text-soft-black link-underline tracking-wide">INICIO</a>
           <a href="#servicios" class="text-sm font-medium text-soft-black link-underline tracking-wide">SERVICIOS</a>
-          <a href="#proyectos" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROYECTOS</a>
-          <a href="#sobre-nosotras" class="text-sm font-medium text-soft-black link-underline tracking-wide">SOBRE NOSOTRAS</a>
+          <a href="proyectos.html" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROYECTOS</a>
+          <a href="sobre-nosotros.html" class="text-sm font-medium text-soft-black link-underline tracking-wide">SOBRE NOSOTRAS</a>
           <a href="#proceso" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROCESO</a>
           <a href="#contacto" class="text-sm font-medium text-soft-black link-underline tracking-wide">CONTACTO</a>
         </div>
 
         <!-- CTA -->
         <div class="hidden lg:block">
-          <a href="#contacto" class="js-hablemos inline-flex items-center px-6 py-2.5 text-white text-sm font-medium rounded-full btn-lift btn-navbar transition-colors">
+          <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 text-white text-sm font-medium rounded-full btn-lift btn-navbar transition-colors">
             HABLEMOS
           </a>
         </div>
@@ -96,10 +88,9 @@
   <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-[85vw] max-w-[320px] h-[100dvh] bg-deep-taupe shadow-2xl lg:hidden z-[9998] flex flex-col" role="dialog" aria-modal="true" aria-label="Menú de navegación">
 
     <!-- Cabecera del menú -->
-    <div class="flex items-center justify-between px-5 py-4 border-b border-white/20 flex-shrink-0">
-      <div class="flex flex-col">
-        <span class="font-serif text-sm font-semibold text-white tracking-wide">CUATRO TRAZOS</span>
-        <span class="text-[8px] text-white/80 tracking-[0.12em] uppercase">Arquitectura · Diseño · Ejecución</span>
+    <div class="mobile-menu-header flex items-center justify-between px-5 py-4 border-b border-white/20 flex-shrink-0 bg-warm-taupe">
+      <div class="flex items-center gap-2">
+        <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos - Arquitectura y Diseño" class="mobile-menu-logo">
       </div>
       <button id="mobile-menu-close" class="flex items-center justify-center w-8 h-8 rounded-lg text-white bg-white/15 border border-white/25 active:bg-white/25 transition-colors" aria-label="Cerrar menú">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -123,7 +114,7 @@
         <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>
         Proyectos
       </a>
-      <a href="#sobre-nosotras" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 active:bg-white/20 transition-colors border-b border-white/20">
+      <a href="sobre-nosotros.html" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 active:bg-white/20 transition-colors border-b border-white/20">
         <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>
         Sobre Nosotras
       </a>
@@ -137,13 +128,19 @@
       </a>
     </nav>
 
-    <!-- CTA inferior -->
-    <div class="px-5 py-4 border-t border-white/20 flex-shrink-0">
-      <a href="#contacto" class="js-hablemos mobile-link flex items-center justify-center gap-2 w-full py-3 rounded-full text-deep-taupe text-sm font-semibold tracking-wide bg-white hover:bg-white/90 active:bg-white/80 transition-colors">
-        HABLEMOS
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M3 8h10M9 4l4 4-4 4"/>
+    <!-- Pie del menú -->
+    <div class="px-5 py-6 border-t border-white/20 flex-shrink-0 space-y-4">
+      <!-- Logo en el pie -->
+      <div class="flex justify-center mb-4">
+        <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos" class="mobile-menu-footer-logo">
+      </div>
+      
+      <!-- Botón HABLEMOS -->
+      <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="mobile-link flex items-center justify-center gap-2 w-full py-3 rounded-full text-white text-sm font-semibold tracking-wide bg-warm-taupe hover:bg-deep-taupe active:bg-deep-taupe transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
         </svg>
+        HABLEMOS
       </a>
     </div>
 
@@ -157,7 +154,7 @@
 
     <!-- Capa parallax: imagen de fondo que se mueve más lento que el scroll -->
     <div class="parallax-bg" data-parallax-speed="0.6" aria-hidden="true"
-         style="background-image: url('assets/hero-header.jpg');"></div>
+         style="background-image: url('assets/1.jpg.jpeg');"></div>
 
     <!-- Overlay: capa sólida base + gradiente para legibilidad del texto -->
     <div class="absolute inset-0 z-10" style="background: rgba(250, 248, 245, 0.88);"></div>
@@ -263,11 +260,11 @@
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 stagger-children">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 stagger-children">
         <!-- Service 1 -->
         <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:0;">
           <div class="img-zoom aspect-[16/10]">
-            <img src="assets/diseño1.jpg" alt="Remodelación de vivienda" class="w-full h-full object-cover">
+            <img src="assets/2.jpg.jpeg" alt="Remodelación de vivienda" class="w-full h-full object-cover">
           </div>
           <div class="p-6 lg:p-7">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
@@ -288,7 +285,7 @@
         <!-- Service 2 -->
         <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:1;">
           <div class="img-zoom aspect-[16/10]">
-            <img src="assets/diseño2.jpg" alt="Diseño de cocina" class="w-full h-full object-cover">
+            <img src="assets/3.png" alt="Diseño de cocina" class="w-full h-full object-cover">
           </div>
           <div class="p-6 lg:p-7">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
@@ -333,7 +330,7 @@
         <!-- Service 4 -->
         <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:3;">
           <div class="img-zoom aspect-[16/10]">
-            <img src="assets/diseño4.jpg" alt="Diseño de local comercial" class="w-full h-full object-cover">
+            <img src="assets/5.jpeg" alt="Diseño de local comercial" class="w-full h-full object-cover">
           </div>
           <div class="p-6 lg:p-7">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
@@ -343,6 +340,54 @@
             </svg>
             <h3 class="font-serif text-xl lg:text-2xl font-medium text-soft-black mb-2">Diseño de locales comerciales</h3>
             <p class="text-sm lg:text-base text-warm-gray leading-relaxed mb-5">Creamos espacios que conectan con tu marca y potencian tu negocio.</p>
+            <a href="#contacto" class="js-saber-mas inline-flex items-center gap-1.5 text-sm font-semibold text-soft-black link-underline group-hover:text-warm-taupe transition-colors">
+              SABER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Service 5: Diseño Paisajismo -->
+        <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:4;">
+          <div class="img-zoom aspect-[16/10]">
+            <img src="assets/paisaje.jpeg" alt="Diseño paisajismo" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 lg:p-7">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+              <path d="M12 2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/>
+              <path d="M12 4v16M6 10c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/>
+              <path d="M6 12v8M18 14c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/>
+              <path d="M18 16v4M4 22h16"/>
+            </svg>
+            <h3 class="font-serif text-xl lg:text-2xl font-medium text-soft-black mb-2">Diseño paisajismo</h3>
+            <p class="text-sm lg:text-base text-warm-gray leading-relaxed mb-5">Transformamos tus espacios exteriores en áreas verdes que conectan con la naturaleza y realzan tu propiedad.</p>
+            <a href="#contacto" class="js-saber-mas inline-flex items-center gap-1.5 text-sm font-semibold text-soft-black link-underline group-hover:text-warm-taupe transition-colors">
+              SABER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- Service 6: Diseño de Oficinas -->
+        <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:5;">
+          <div class="img-zoom aspect-[16/10]">
+            <img src="assets/oficinas.jpg" alt="Diseño de Oficinas" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 lg:p-7">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
+              <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+              <path d="M2 17h20"/>
+              <path d="M6 5v8"/>
+              <path d="M10 5v8"/>
+              <path d="M14 5v8"/>
+              <path d="M18 5v8"/>
+            </svg>
+            <h3 class="font-serif text-xl lg:text-2xl font-medium text-soft-black mb-2">Diseño de Oficinas</h3>
+            <p class="text-sm lg:text-base text-warm-gray leading-relaxed mb-5">Diseñamos espacios de trabajo que inspiran productividad, bienestar y reflejan la identidad de tu empresa.</p>
             <a href="#contacto" class="js-saber-mas inline-flex items-center gap-1.5 text-sm font-semibold text-soft-black link-underline group-hover:text-warm-taupe transition-colors">
               SABER MÁS
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
@@ -441,26 +486,82 @@
     </div>
 
     <div class="relative">
-      <!-- Gallery -->
+      <!-- Slider de proyectos -->
       <div class="gallery-scroll px-6 lg:px-10 max-w-[1400px] mx-auto" id="gallery">
-        <div class="gallery-item w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal" style="--i:0;">
-          <img src="assets/project-1.jpg" alt="Proyecto 1" class="w-full h-[280px] sm:h-[350px] object-cover">
-        </div>
-        <div class="gallery-item w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal" style="--i:1;">
-          <img src="assets/project-2.jpg" alt="Proyecto 2" class="w-full h-[280px] sm:h-[350px] object-cover">
-        </div>
-        <div class="gallery-item w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal" style="--i:2;">
-          <img src="assets/project-3.jpg" alt="Proyecto 3" class="w-full h-[280px] sm:h-[350px] object-cover">
-        </div>
-        <div class="gallery-item w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal" style="--i:3;">
-          <img src="assets/project-4.jpg" alt="Proyecto 4" class="w-full h-[280px] sm:h-[350px] object-cover">
-        </div>
-        <div class="gallery-item w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal" style="--i:4;">
-          <img src="assets/project-5.jpg" alt="Proyecto 5" class="w-full h-[280px] sm:h-[350px] object-cover">
-        </div>
+
+        <!-- Proyecto 1: Alba -->
+        <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:0;">
+          <img src="Proyectos/Alba/6V4A8195-HDR.jpg" alt="Proyecto Alba" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <div class="p-4 flex items-center justify-between">
+            <h3 class="font-serif text-lg font-medium text-soft-black">Alba</h3>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
+              VER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Proyecto 2: Atenas -->
+        <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:1;">
+          <img src="Proyectos/Atenas/WhatsApp Image 2026-07-03 at 10.44.24 AM.jpeg" alt="Proyecto Atenas" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <div class="p-4 flex items-center justify-between">
+            <h3 class="font-serif text-lg font-medium text-soft-black">Atenas</h3>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
+              VER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Proyecto 3: Augusto Legia -->
+        <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:2;">
+          <img src="Proyectos/Augusto Legia/WhatsApp Image 2026-07-03 at 10.44.23 AM.jpeg" alt="Proyecto Augusto Legia" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <div class="p-4 flex items-center justify-between">
+            <h3 class="font-serif text-lg font-medium text-soft-black">Augusto Legia</h3>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
+              VER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Proyecto 4: Club Hipico -->
+        <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:3;">
+          <img src="Proyectos/club hipico/6V4A7903-HDR.jpg" alt="Proyecto Club Hipico" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <div class="p-4 flex items-center justify-between">
+            <h3 class="font-serif text-lg font-medium text-soft-black">Club Hípico</h3>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
+              VER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Proyecto 5: Huertos Familiares -->
+        <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:4;">
+          <img src="Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.25 AM.jpeg" alt="Proyecto Huertos Familiares" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <div class="p-4 flex items-center justify-between">
+            <h3 class="font-serif text-lg font-medium text-soft-black">Huertos Familiares</h3>
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
+              VER MÁS
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
+                <path d="M3 8h10M9 4l4 4-4 4"/>
+              </svg>
+            </span>
+          </div>
+        </a>
+
       </div>
 
-      <!-- Navigation Arrows -->
+      <!-- Flechas de navegación -->
       <div class="hidden lg:flex justify-end gap-3 max-w-[1400px] mx-auto px-10 mt-8">
         <button id="gallery-prev" class="w-12 h-12 rounded-full border border-warm-taupe bg-warm-taupe flex items-center justify-center text-white hover:bg-deep-taupe hover:border-deep-taupe transition-all duration-300" aria-label="Anterior">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -474,8 +575,9 @@
         </button>
       </div>
 
+      <!-- Botón Ver todos los proyectos -->
       <div class="max-w-[1400px] mx-auto px-6 lg:px-10 mt-10 reveal">
-        <a href="#contacto" class="js-ver-todos inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-warm-taupe hover:bg-deep-taupe rounded-full btn-lift transition-colors">
+        <a href="proyectos.html" class="js-ver-todos inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-warm-taupe hover:bg-deep-taupe rounded-full btn-lift transition-colors">
           VER TODOS LOS PROYECTOS
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -499,7 +601,7 @@
           <p class="text-light-warm-gray text-lg leading-relaxed mb-8">
             Contanos tu idea y diseñemos juntos tu próximo proyecto.
           </p>
-          <a href="mailto:hola@cuatrotrazos.com" class="js-hablemos inline-flex items-center gap-2 px-8 py-4 bg-warm-taupe text-white text-sm font-semibold tracking-wide rounded-full btn-lift hover:bg-deep-taupe transition-colors">
+          <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 bg-warm-taupe text-white text-sm font-semibold tracking-wide rounded-full btn-lift hover:bg-deep-taupe transition-colors footer-cta-button">
             HABLEMOS DE TU PROYECTO
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M3 8h10M9 4l4 4-4 4"/>
@@ -519,7 +621,7 @@
               <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
             </svg>
             <div>
-              <p class="text-2xl lg:text-3xl font-serif font-medium text-white">+10</p>
+              <p class="text-2xl lg:text-3xl font-serif font-medium text-warm-taupe">+10</p>
               <p class="text-sm text-light-warm-gray">Años de experiencia</p>
             </div>
           </div>
@@ -529,7 +631,7 @@
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
             <div>
-              <p class="text-2xl lg:text-3xl font-serif font-medium text-white">+100</p>
+              <p class="text-2xl lg:text-3xl font-serif font-medium text-warm-taupe">+100</p>
               <p class="text-sm text-light-warm-gray">Proyectos exitosos</p>
             </div>
           </div>
@@ -538,7 +640,7 @@
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
             </svg>
             <div>
-              <p class="text-2xl lg:text-3xl font-serif font-medium text-white">100%</p>
+              <p class="text-2xl lg:text-3xl font-serif font-medium text-warm-taupe">100%</p>
               <p class="text-sm text-light-warm-gray">Clientes satisfechos</p>
             </div>
           </div>
@@ -549,19 +651,19 @@
           <div class="bg-white/5 border border-white/10 rounded-xl p-8">
             <h3 class="font-serif text-xl text-warm-taupe mb-6">Contacto</h3>
             <div class="space-y-4">
-              <a href="mailto:hola@cuatrotrazos.com" class="flex items-center gap-3 text-light-warm-gray hover:text-white transition-colors group">
+              <a href="mailto:contacto@cuatrotrazos.com" class="flex items-center gap-3 text-light-warm-gray hover:text-white transition-colors group">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
                 </svg>
-                <span class="text-sm group-hover:underline underline-offset-4">hola@cuatrotrazos.com</span>
+                <span class="text-sm group-hover:underline underline-offset-4">contacto@cuatrotrazos.com</span>
               </a>
               <div class="flex items-center gap-3 text-light-warm-gray">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
-                <span class="text-sm">Buenos Aires, Argentina</span>
+                <span class="text-sm">Santiago, Chile</span>
               </div>
             </div>
             <div class="flex items-center gap-4 mt-8 pt-6 border-t border-white/10">
@@ -578,7 +680,7 @@
                   <path d="M5 12c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7"/>
                 </svg>
               </a>
-              <a href="mailto:hola@cuatrotrazos.com" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-light-warm-gray hover:bg-warm-taupe hover:border-warm-taupe hover:text-white transition-all" aria-label="Email">
+              <a href="mailto:contacto@cuatrotrazos.com" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-light-warm-gray hover:bg-warm-taupe hover:border-warm-taupe hover:text-white transition-all" aria-label="Email">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <polyline points="22,6 12,13 2,6"/>
@@ -597,16 +699,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-10 mb-16">
         <!-- Logo & Tagline -->
         <div class="reveal">
-          <a href="#inicio" class="flex flex-col">
-            <div class="flex items-center gap-2 mb-2">
-              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-white">
-                <line x1="2" y1="2" x2="2" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="10" y1="2" x2="10" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                <line x1="18" y1="2" x2="18" y2="14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              </svg>
-              <span class="font-serif text-lg font-semibold tracking-wide text-white">CUATRO TRAZOS</span>
-            </div>
-            <span class="text-[10px] lg:text-xs text-white/80 tracking-[0.15em] uppercase font-medium">Arquitectura · Diseño · Ejecución</span>
+          <a href="#inicio" class="flex items-center footer-logo-link">
+            <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos - Arquitectura y Diseño" class="footer-logo-image">
           </a>
         </div>
 
@@ -629,7 +723,7 @@
                 <path d="M5 12c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7"/>
               </svg>
             </a>
-            <a href="mailto:hola@cuatrotrazos.com" class="text-white/80 hover:text-white transition-colors" aria-label="Email">
+            <a href="mailto:contacto@cuatrotrazos.com" class="text-white/80 hover:text-white transition-colors" aria-label="Email">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>
@@ -641,14 +735,14 @@
         <!-- Contact -->
         <div class="reveal" style="--i:2;">
           <p class="text-sm text-white/80 mb-2">
-            <a href="mailto:hola@cuatrotrazos.com" class="hover:text-white transition-colors">hola@cuatrotrazos.com</a>
+            <a href="mailto:contacto@cuatrotrazos.com" class="hover:text-white transition-colors">contacto@cuatrotrazos.com</a>
           </p>
-          <p class="text-sm text-white/80">Buenos Aires, Argentina</p>
+          <p class="text-sm text-white/80">Santiago, Chile</p>
         </div>
       </div>
 
       <div class="border-t border-white/20 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-white/80">© 2026 Cuatro Trazos. Todos los derechos reservados.</p>
+        <p class="text-xs text-white/80">© 2026 - 2027 Cuatro Trazos. Todos los derechos reservados. diseñado por <a href="https://funnelatf.cl" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">funnelatf.cl</a></p>
         <div class="flex items-center gap-6">
           <a href="#" class="text-xs text-white/80 hover:text-white transition-colors">Política de privacidad</a>
           <a href="#" class="text-xs text-white/80 hover:text-white transition-colors">Términos de uso</a>
@@ -663,11 +757,15 @@
     <span class="saber-mas-toast__tail"></span>
   </div>
 
-  <!-- Toast / Globo de mensaje para HABLEMOS -->
-  <div id="hablemos-toast" class="hablemos-toast" role="status" aria-live="polite">
-    <span class="hablemos-toast__text">AQUI DE DIRIGE AL CLIENTE A UN WHATSAP</span>
-    <span class="hablemos-toast__tail"></span>
-  </div>
+  <!-- Botón flotante de WhatsApp -->
+  <a id="whatsapp-button" href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <div class="whatsapp-float-content">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
+      </svg>
+      <span class="whatsapp-float-text">Hablemos</span>
+    </div>
+  </a>
 
   <!-- Toast / Globo de mensaje para VER TODOS LOS PROYECTOS -->
   <div id="ver-todos-toast" class="ver-todos-toast" role="status" aria-live="polite">

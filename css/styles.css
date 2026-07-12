@@ -1,6 +1,6 @@
 /* ============================================================
    CUATRO TRAZOS — Hoja de Estilos Principal
-   Arquitectura · Diseño · Ejecución
+   Arquitectura · Diseño
    ============================================================ */
 
 /* ------------------------------------------------------------
@@ -99,6 +99,27 @@ body {
       background-color: #C8A98F !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+      height: 70px !important;
+      padding: 0 !important;
+    }
+    
+    #navbar > div {
+      height: 100% !important;
+    }
+    
+    #navbar > div > div {
+      height: 100% !important;
+      padding: 0 !important;
+    }
+    
+    .logo-link {
+      height: 100% !important;
+      margin-left: 0.5rem !important;
+      padding-right: 0 !important;
+    }
+    
+    .logo-image {
+      max-height: 50px !important;
     }
 
     #navbar.navbar-scrolled {
@@ -106,6 +127,8 @@ body {
       border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
     }
+    
+
 
     /* Botón hamburguesa: blanco con icono café, FIJADO en esquina superior derecha */
     #mobile-menu-btn {
@@ -160,6 +183,19 @@ body {
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Páginas internas: navbar con fondo café tenue siempre visible */
+  #navbar.page-navbar {
+    background-color: #C8A98F !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
+  }
+
+  #navbar.page-navbar.navbar-scrolled {
+    background-color: #B08F73 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
   }
 }
 
@@ -609,4 +645,233 @@ footer {
   height: 12px;
   background-color: #B08F73;
   border-radius: 2px;
+}
+
+
+/* ============================================================
+   LOGO IMAGE — Estilos para el logo de imagen
+   ============================================================ */
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin-right: auto;
+  margin-left: 3rem;
+  padding-right: 2rem;
+}
+
+.logo-link:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+/* Menú de navegación centrado en desktop */
+@media (min-width: 1024px) {
+  #navbar > div > div > div:nth-child(2) {
+    flex: 1;
+    display: flex !important;
+    justify-content: center;
+  }
+}
+
+.logo-image {
+  max-height: 65px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Desktop: logo más grande y prominente */
+@media (min-width: 1024px) {
+  .logo-image {
+    max-height: 90px;
+  }
+  
+  .logo-link {
+    margin-left: 4rem;
+  }
+}
+
+/* Móvil: logo más pequeño para caber en la navbar */
+@media (max-width: 1023px) {
+  .logo-image {
+    max-height: 55px;
+  }
+  
+  .logo-link {
+    padding-right: 1rem;
+    margin-left: 1.5rem;
+  }
+}
+
+
+/* ============================================================
+   WHATSAPP FLOATING BUTTON — Botón flotante de WhatsApp
+   ============================================================ */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #25D366;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.25rem;
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  z-index: 999;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+  gap: 0.5rem;
+}
+
+.whatsapp-float-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.whatsapp-float-text {
+  font-weight: 600;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+
+.whatsapp-float:hover {
+  background-color: #20BA5A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float:active {
+  transform: translateY(0);
+}
+
+.whatsapp-float svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* Responsivo: ajustar tamaño en móvil */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.65rem 1rem;
+  }
+  
+  .whatsapp-float-text {
+    font-size: 0.8125rem;
+  }
+  
+  .whatsapp-float svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Muy pequeño: ajustar más */
+@media (max-width: 480px) {
+  .whatsapp-float {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.6rem 0.9rem;
+  }
+  
+  .whatsapp-float-text {
+    font-size: 0.75rem;
+  }
+  
+  .whatsapp-float svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
+/* ============================================================
+   FOOTER LOGO — Logo en el pie de página
+   ============================================================ */
+
+.footer-logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer-logo-link:hover {
+  transform: scale(1.02);
+  filter: brightness(1.05);
+}
+
+.footer-logo-image {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Responsivo: ajustar tamaño en móvil */
+@media (max-width: 768px) {
+  .footer-logo-image {
+    max-height: 100px;
+  }
+}
+
+/* Muy pequeño: ajustar más */
+@media (max-width: 480px) {
+  .footer-logo-image {
+    max-height: 85px;
+  }
+}
+
+/* ============================================================
+   FOOTER CTA BUTTON — Botón de llamada a la acción en footer
+   ============================================================ */
+
+.footer-cta-button {
+  background-color: #C8A98F !important;
+  color: #FFFFFF !important;
+}
+
+.footer-cta-button:hover {
+  background-color: #B08F73 !important;
+}
+
+
+/* ============================================================
+   MOBILE MENU STYLES — Estilos del menú móvil
+   ============================================================ */
+
+.mobile-menu-header {
+  background-color: #C8A98F !important;
+}
+
+.mobile-menu-logo {
+  max-height: 50px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.mobile-menu-footer-logo {
+  max-height: 70px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }

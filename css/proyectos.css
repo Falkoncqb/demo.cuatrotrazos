@@ -1,0 +1,576 @@
+/* ============================================================
+   PROYECTOS — Página de Galerías de Proyectos
+   Arquitectura · Diseño
+   ============================================================ */
+
+/* Sección Hero de Proyectos */
+#proyectos-hero {
+  animation: fadeInDown 0.8s ease-out;
+}
+
+#proyectos-hero h1 {
+  animation: slideInUp 0.8s ease-out 0.1s both;
+}
+
+#proyectos-hero p {
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+/* Contenedor de Proyectos */
+#proyectos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* Proyecto Individual */
+.proyecto-item {
+  animation: fadeIn 0.6s ease-out;
+  border-bottom: 2px solid #E5E0DB;
+  padding-bottom: 3rem;
+}
+
+.proyecto-item:last-child {
+  border-bottom: none;
+}
+
+/* Header Flex - Imagen a la derecha */
+.proyecto-header-flex {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .proyecto-header-flex {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .proyecto-header-flex {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Informacion del Proyecto */
+.proyecto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.proyecto-info h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1A1A1A;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .proyecto-info h2 {
+    font-size: 2rem;
+  }
+}
+
+.proyecto-info p {
+  color: #6B6560;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Boton Ver Mas */
+.btn-ver-mas {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #C8A98F;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.btn-ver-mas:hover {
+  background: #B08F73;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(200, 169, 143, 0.3);
+}
+
+.btn-ver-mas svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.btn-ver-mas.active svg {
+  transform: rotate(180deg);
+}
+
+/* Imagen Principal */
+.proyecto-imagen-principal {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1;
+  background-color: #F5F0EB;
+  cursor: pointer;
+}
+
+.proyecto-imagen-principal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.5s ease;
+}
+
+.proyecto-imagen-principal:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
+}
+
+/* Galeria Expandible */
+.proyecto-galeria-expandible {
+  animation: slideDown 0.4s ease-out;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #E5E0DB;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 1000px;
+  }
+}
+
+/* Grid de Galería */
+.proyecto-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .proyecto-galeria {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .proyecto-galeria {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .proyecto-galeria {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* Imagen de Galería */
+.galeria-imagen {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  aspect-ratio: 1;
+  background-color: #F5F0EB;
+  cursor: pointer;
+  group: "galeria";
+}
+
+.galeria-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.5s ease;
+}
+
+.galeria-imagen:hover img {
+  transform: scale(1.08);
+  filter: brightness(0.95);
+}
+
+/* Overlay en hover */
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(200, 169, 143, 0.15);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px);
+}
+
+.galeria-imagen:hover .galeria-overlay {
+  opacity: 1;
+}
+
+.galeria-overlay-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0.8);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.galeria-imagen:hover .galeria-overlay-icon {
+  transform: scale(1);
+}
+
+.galeria-overlay-icon svg {
+  width: 24px;
+  height: 24px;
+  color: #C8A98F;
+}
+
+/* Modal Lightbox */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 1rem;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  animation: zoomIn 0.3s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Botones de navegación del Lightbox */
+.lightbox-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.lightbox-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lightbox-nav-btn.prev {
+  left: 1rem;
+}
+
+.lightbox-nav-btn.next {
+  right: 1rem;
+}
+
+/* Botón cerrar */
+.lightbox-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 11;
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lightbox-close-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Contador de imágenes */
+.lightbox-counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  .proyecto-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .proyecto-galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .lightbox-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lightbox-nav-btn.prev {
+    left: 0.5rem;
+  }
+
+  .lightbox-nav-btn.next {
+    right: 0.5rem;
+  }
+
+  .lightbox-close-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .proyecto-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .proyecto-header h2 {
+    font-size: 1.25rem;
+  }
+
+  .proyecto-galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .galeria-imagen {
+    border-radius: 8px;
+  }
+
+  .lightbox-nav-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+
+  .lightbox-counter {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.75rem;
+    bottom: 1rem;
+  }
+}
+
+/* CTA Section */
+#cta-proyectos {
+  background: linear-gradient(135deg, #C8A98F 0%, #B08F73 100%);
+}
+
+#cta-proyectos h2 {
+  animation: slideInUp 0.8s ease-out;
+}
+
+#cta-proyectos p {
+  animation: slideInUp 0.8s ease-out 0.1s both;
+}
+
+#cta-proyectos a {
+  animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+/* Efecto reveal para elementos */
+.reveal {
+  opacity: 0;
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+/* Estilos para el footer en la página de proyectos */
+.footer-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo-link:hover {
+  transform: scale(1.05);
+}
+
+.footer-logo-image {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Botón flotante de WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: auto;
+  height: auto;
+  background: #25D366;
+  color: white;
+  border-radius: 50px;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+  background: #20BA5A;
+}
+
+.whatsapp-float-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.whatsapp-float-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .whatsapp-float-text {
+    display: inline;
+  }
+}
+
+@media (max-width: 640px) {
+  .whatsapp-float {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 56px;
+    height: 56px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -275,52 +275,6 @@
   });
 })();
 
-/* ------------------------------------------------------------
-   7. TOAST "HABLEMOS" — Globo de mensaje al hacer clic
-   ------------------------------------------------------------ */
-(function initHablemosToast() {
-  const hablemosLinks = document.querySelectorAll('.js-hablemos');
-  const toast = document.getElementById('hablemos-toast');
-  if (!hablemosLinks.length || !toast) return;
+/* Nota: Los botones HABLEMOS ahora abren WhatsApp directamente sin toast */
 
-  let hideTimeout = null;
-
-  function showToast(e) {
-    e.preventDefault();
-    toast.classList.add('visible');
-
-    if (hideTimeout) clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => {
-      toast.classList.remove('visible');
-    }, 2800);
-  }
-
-  hablemosLinks.forEach(link => {
-    link.addEventListener('click', showToast);
-  });
-})();
-
-/* ------------------------------------------------------------
-   8. TOAST "VER TODOS LOS PROYECTOS" — Globo de mensaje al hacer clic
-   ------------------------------------------------------------ */
-(function initVerTodosToast() {
-  const verTodosLinks = document.querySelectorAll('.js-ver-todos');
-  const toast = document.getElementById('ver-todos-toast');
-  if (!verTodosLinks.length || !toast) return;
-
-  let hideTimeout = null;
-
-  function showToast(e) {
-    e.preventDefault();
-    toast.classList.add('visible');
-
-    if (hideTimeout) clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => {
-      toast.classList.remove('visible');
-    }, 3500);
-  }
-
-  verTodosLinks.forEach(link => {
-    link.addEventListener('click', showToast);
-  });
-})();
+/* Nota: Los botones VER TODOS ahora tienen funcionalidad diferente */

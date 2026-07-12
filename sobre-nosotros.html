@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Nosotros — Cuatro Trazos</title>
+  <meta name="description" content="Conoce a Cuatro Trazos, estudio de arquitectura y diseño de interiores fundado por Daphner Ibáñez y Camila Satorres. Más de 15 años transformando espacios en Santiago, Chile.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script>
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream:             '#FAF8F5',
+            beige:             '#F5F0EB',
+            'warm-taupe':      '#C8A98F',
+            'deep-taupe':      '#B08F73',
+            charcoal:          '#1E1E1E',
+            'soft-black':      '#1A1A1A',
+            'warm-gray':       '#6B6560',
+            'light-warm-gray': '#A8A8A8',
+            divider:           '#E5E0DB',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['"Manrope"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* Línea decorativa */
+    .section-divider {
+      width: 60px;
+      height: 3px;
+      background: #C8A98F;
+      margin: 1.5rem 0;
+    }
+
+    /* Tarjetas de servicios */
+    .servicio-card {
+      border-left: 3px solid #C8A98F;
+      padding-left: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .servicio-card:hover {
+      border-left-color: #B08F73;
+      transform: translateX(4px);
+    }
+
+    /* Hero con overlay */
+    .hero-sobre {
+      background: linear-gradient(135deg, #FAF8F5 0%, #F5F0EB 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-sobre::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(200,169,143,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    /* Cita destacada */
+    .quote-block {
+      border-left: 4px solid #C8A98F;
+      background: linear-gradient(135deg, rgba(200,169,143,0.08) 0%, rgba(176,143,115,0.05) 100%);
+      padding: 1.5rem 2rem;
+      border-radius: 0 12px 12px 0;
+    }
+
+    /* Fundadoras */
+    .fundadora-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #C8A98F;
+      color: white;
+      padding: 0.35rem 0.85rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+
+    /* Botón contactar */
+    .btn-contactar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #C8A98F;
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 50px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 16px rgba(200,169,143,0.3);
+    }
+
+    .btn-contactar:hover {
+      background: #B08F73;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(200,169,143,0.4);
+    }
+
+    /* Número destacado */
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: #C8A98F;
+      line-height: 1;
+    }
+
+    /* Animaciones */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-in {
+      animation: fadeInUp 0.7s ease-out forwards;
+    }
+
+    .animate-in-delay-1 { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.7s; }
+    .animate-in-delay-2 { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.7s; }
+    .animate-in-delay-3 { animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.7s; }
+    .animate-in-delay-4 { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; animation-name: fadeInUp; animation-duration: 0.7s; }
+  </style>
+</head>
+<body class="font-sans antialiased bg-cream">
+
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 page-navbar">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20 lg:h-24">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center logo-link">
+          <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos - Arquitectura y Diseño" class="logo-image">
+        </a>
+
+        <!-- Desktop Links -->
+        <div class="hidden lg:flex items-center gap-8 xl:gap-10">
+          <a href="index.html#inicio" class="text-sm font-medium text-soft-black link-underline tracking-wide">INICIO</a>
+          <a href="index.html#servicios" class="text-sm font-medium text-soft-black link-underline tracking-wide">SERVICIOS</a>
+          <a href="proyectos.html" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROYECTOS</a>
+          <a href="sobre-nosotros.html" class="text-sm font-medium text-warm-taupe link-underline tracking-wide font-semibold">SOBRE NOSOTRAS</a>
+          <a href="index.html#proceso" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROCESO</a>
+          <a href="index.html#contacto" class="text-sm font-medium text-soft-black link-underline tracking-wide">CONTACTO</a>
+        </div>
+
+        <!-- CTA -->
+        <div class="hidden lg:block">
+          <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 text-white text-sm font-medium rounded-full btn-lift btn-navbar transition-colors">
+            HABLEMOS
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Button -->
+  <button id="mobile-menu-btn" class="lg:hidden" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobile-menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-[85vw] max-w-[320px] h-[100dvh] bg-deep-taupe shadow-2xl lg:hidden z-[9998] flex flex-col" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+    <div class="mobile-menu-header flex items-center justify-between px-5 py-4 border-b border-white/20 flex-shrink-0 bg-warm-taupe">
+      <div class="flex items-center gap-2">
+        <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos" class="mobile-menu-logo">
+      </div>
+      <button id="mobile-menu-close" class="flex items-center justify-center w-8 h-8 rounded-lg text-white bg-white/15 border border-white/25 transition-colors" aria-label="Cerrar menú">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex flex-col px-4 py-4 gap-0.5 flex-1 overflow-y-auto">
+      <a href="index.html#inicio" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 transition-colors border-b border-white/20">
+        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>Inicio
+      </a>
+      <a href="index.html#servicios" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 transition-colors border-b border-white/20">
+        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>Servicios
+      </a>
+      <a href="proyectos.html" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 transition-colors border-b border-white/20">
+        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>Proyectos
+      </a>
+      <a href="sobre-nosotros.html" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm bg-white/10 transition-colors border-b border-white/20">
+        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>Sobre Nosotras
+      </a>
+      <a href="index.html#proceso" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 transition-colors border-b border-white/20">
+        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>Proceso
+      </a>
+      <a href="index.html#contacto" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 transition-colors">
+        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>Contacto
+      </a>
+    </nav>
+
+    <div class="px-5 py-6 border-t border-white/20 flex-shrink-0 space-y-4">
+      <div class="flex justify-center mb-4">
+        <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos" class="mobile-menu-footer-logo">
+      </div>
+      <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="mobile-link flex items-center justify-center gap-2 w-full py-3 rounded-full text-white text-sm font-semibold tracking-wide bg-warm-taupe hover:bg-deep-taupe transition-colors">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
+        </svg>
+        HABLEMOS
+      </a>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Backdrop -->
+  <div id="mobile-menu-backdrop" class="mobile-menu-backdrop fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[9997] lg:hidden opacity-0 invisible transition-all duration-300" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       HERO — Quiénes Somos
+  ============================================================ -->
+  <section class="hero-sobre pt-36 lg:pt-44 pb-20 lg:pb-28">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+        <!-- Texto principal -->
+        <div class="animate-in">
+          <span class="text-xs font-semibold tracking-[0.2em] text-warm-taupe uppercase">Quiénes Somos</span>
+          <div class="section-divider"></div>
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-medium text-soft-black leading-[1.1] mb-6">
+            Diseñamos espacios que transforman la manera de <em class="text-warm-taupe not-italic">vivir, habitar e invertir.</em>
+          </h1>
+          <p class="text-base lg:text-lg text-warm-gray leading-relaxed mb-8">
+            En <strong class="text-soft-black">Cuatro Trazos</strong> creemos que los espacios tienen el poder de mejorar la calidad de vida, generar bienestar y aumentar el valor de una propiedad.
+          </p>
+          <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="btn-contactar">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
+            </svg>
+            CONTÁCTANOS
+          </a>
+        </div>
+
+        <!-- Logo + Estadísticas -->
+        <div class="animate-in-delay-2 flex flex-col items-center lg:items-end gap-10">
+          <div class="bg-white rounded-2xl p-10 shadow-md border border-divider flex flex-col items-center gap-6 w-full max-w-sm">
+            <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos" class="w-48 object-contain">
+            <p class="text-center text-sm text-warm-gray italic leading-relaxed">
+              "Diseñamos tu espacio, transformamos tu forma de vivir."
+            </p>
+            <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="btn-contactar w-full justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
+              </svg>
+              CONTÁCTANOS
+            </a>
+          </div>
+
+          <!-- Estadísticas -->
+          <div class="grid grid-cols-3 gap-6 w-full max-w-sm">
+            <div class="text-center">
+              <div class="stat-number">+15</div>
+              <p class="text-xs text-warm-gray mt-1 leading-tight">Años de experiencia</p>
+            </div>
+            <div class="text-center">
+              <div class="stat-number">+100</div>
+              <p class="text-xs text-warm-gray mt-1 leading-tight">Proyectos realizados</p>
+            </div>
+            <div class="text-center">
+              <div class="stat-number">100%</div>
+              <p class="text-xs text-warm-gray mt-1 leading-tight">Compromiso</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN — Nuestra Historia
+  ============================================================ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="max-w-3xl mx-auto">
+
+        <!-- Fundadoras -->
+        <div class="mb-12 animate-in">
+          <span class="text-xs font-semibold tracking-[0.2em] text-warm-taupe uppercase">El Equipo</span>
+          <div class="section-divider"></div>
+          <h2 class="font-serif text-3xl lg:text-4xl font-medium text-soft-black mb-8">Nuestras Fundadoras</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="bg-beige rounded-xl p-6 border border-divider">
+              <span class="fundadora-badge mb-3 inline-flex">Arquitecta e ITO</span>
+              <h3 class="font-serif text-xl font-semibold text-soft-black mb-2">Daphner Ibáñez</h3>
+              <p class="text-sm text-warm-gray leading-relaxed">Más de 15 años de experiencia en el sector inmobiliario, combinando visión técnica y estratégica en cada proyecto.</p>
+            </div>
+            <div class="bg-beige rounded-xl p-6 border border-divider">
+              <span class="fundadora-badge mb-3 inline-flex">Diseñadora de Ambientes</span>
+              <h3 class="font-serif text-xl font-semibold text-soft-black mb-2">Camila Satorres</h3>
+              <p class="text-sm text-warm-gray leading-relaxed">Más de 15 años transformando hogares, departamentos y espacios comerciales con sensibilidad estética y funcionalidad.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto descriptivo -->
+        <div class="space-y-6 text-base lg:text-lg text-warm-gray leading-relaxed animate-in-delay-1">
+          <p>
+            Unimos nuestra experiencia técnica, sensibilidad estética y visión estratégica para desarrollar proyectos que equilibran <strong class="text-soft-black">funcionalidad, belleza y bienestar</strong>. Nos inspira la neuroarquitectura, el diseño biofílico y la convicción de que un espacio bien pensado puede influir positivamente en la forma en que vivimos, trabajamos y nos relacionamos.
+          </p>
+          <p>
+            Acompañamos a nuestros clientes desde la primera idea hasta la ejecución final, entregando una experiencia cercana, transparente y cuidadosamente guiada en cada etapa del proceso.
+          </p>
+        </div>
+
+        <!-- Cita destacada -->
+        <div class="quote-block mt-10 animate-in-delay-2">
+          <p class="font-serif text-xl lg:text-2xl font-medium text-soft-black italic leading-relaxed mb-2">
+            "Porque para nosotros diseñar no es solo construir espacios."
+          </p>
+          <p class="text-warm-gray text-base leading-relaxed">
+            Es crear escenarios que permitan vivir mejor, disfrutar más y proyectar nuevas oportunidades.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECCIÓN — Qué Hacemos
+  ============================================================ -->
+  <section class="py-20 lg:py-28 bg-beige">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+
+      <div class="mb-14 text-center">
+        <span class="text-xs font-semibold tracking-[0.2em] text-warm-taupe uppercase">Nuestros Servicios</span>
+        <div class="section-divider mx-auto"></div>
+        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-soft-black">Qué Hacemos</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+
+        <!-- Servicio 1: Remodelaciones Integrales -->
+        <div class="servicio-card animate-in">
+          <div class="bg-white rounded-xl p-8 border border-divider h-full">
+            <div class="w-12 h-12 bg-warm-taupe/10 rounded-xl flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl lg:text-2xl font-semibold text-soft-black mb-3">Remodelaciones Integrales</h3>
+            <p class="text-warm-gray text-sm lg:text-base leading-relaxed mb-4">
+              Transformamos viviendas, departamentos y espacios existentes en lugares funcionales, armónicos y adaptados a tu estilo de vida.
+            </p>
+            <p class="text-warm-gray text-sm leading-relaxed">
+              Desarrollamos propuestas de distribución, selección de materiales, iluminación, mobiliario y detalles constructivos que permiten visualizar el resultado antes de comenzar la obra mediante imágenes 3D y planimetría arquitectónica.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicio 2: Asesorías de Diseño -->
+        <div class="servicio-card animate-in-delay-1">
+          <div class="bg-white rounded-xl p-8 border border-divider h-full">
+            <div class="w-12 h-12 bg-warm-taupe/10 rounded-xl flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 8v4M12 16h.01"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl lg:text-2xl font-semibold text-soft-black mb-3">Asesorías de Diseño</h3>
+            <p class="text-warm-gray text-sm lg:text-base leading-relaxed mb-4">
+              A veces pequeños cambios generan grandes transformaciones.
+            </p>
+            <p class="text-warm-gray text-sm leading-relaxed">
+              Analizamos tu espacio, comprendemos tus necesidades y diseñamos soluciones que optimizan la funcionalidad, potencian la estética y aprovechan al máximo cada metro cuadrado.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicio 3: AirBnB Refresh -->
+        <div class="servicio-card animate-in-delay-2">
+          <div class="bg-white rounded-xl p-8 border border-divider h-full">
+            <div class="w-12 h-12 bg-warm-taupe/10 rounded-xl flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl lg:text-2xl font-semibold text-soft-black mb-3">AirBnB Refresh</h3>
+            <p class="text-warm-gray text-sm lg:text-base leading-relaxed mb-4">
+              Diseñamos espacios pensados para destacar, generar mejores experiencias y aumentar la rentabilidad de tu propiedad.
+            </p>
+            <p class="text-warm-gray text-sm leading-relaxed">
+              Creamos ambientes atractivos, funcionales y memorables que permiten elevar la percepción de valor, mejorar las evaluaciones de los huéspedes y maximizar el potencial comercial de cada inversión.
+            </p>
+          </div>
+        </div>
+
+        <!-- Servicio 4: Espacios Comerciales y Hospitality -->
+        <div class="servicio-card animate-in-delay-3">
+          <div class="bg-white rounded-xl p-8 border border-divider h-full">
+            <div class="w-12 h-12 bg-warm-taupe/10 rounded-xl flex items-center justify-center mb-5">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2"/>
+                <path d="M8 21h8M12 17v4"/>
+              </svg>
+            </div>
+            <h3 class="font-serif text-xl lg:text-2xl font-semibold text-soft-black mb-3">Espacios Comerciales y Hospitality</h3>
+            <p class="text-warm-gray text-sm lg:text-base leading-relaxed mb-4">
+              Diseñamos oficinas, restaurantes, hoteles y locales comerciales capaces de transmitir identidad, potenciar la experiencia de usuario y mejorar el desempeño de cada negocio.
+            </p>
+            <p class="text-warm-gray text-sm leading-relaxed">
+              Cada proyecto es concebido para emocionar, diferenciarse y permanecer en la memoria de quienes lo habitan.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CTA Final
+  ============================================================ -->
+  <section class="py-20 lg:py-28 bg-warm-taupe">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-soft-black mb-4">
+        ¿Listo para transformar tu espacio?
+      </h2>
+      <p class="text-soft-black/80 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+        Cuéntanos tu proyecto y te acompañamos desde la primera idea hasta la entrega final.
+      </p>
+      <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2.5 px-8 py-4 bg-white text-warm-taupe text-sm font-bold tracking-wide rounded-full btn-lift hover:bg-cream transition-colors shadow-lg">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
+        </svg>
+        CONTÁCTANOS
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-warm-taupe border-t border-white/20 pt-16 pb-10">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-10 mb-16">
+        <div>
+          <a href="index.html" class="footer-logo-link">
+            <img src="assets/cuatro-trazos.jpg" alt="Cuatro Trazos" class="footer-logo-image">
+          </a>
+        </div>
+        <div>
+          <p class="text-sm text-white/80 leading-relaxed max-w-sm">
+            Estudio de arquitectura y diseño de ambientes. Diseñamos tu espacio, transformamos tu forma de vivir.
+          </p>
+          <div class="flex items-center gap-4 mt-6">
+            <a href="#" class="text-white/80 hover:text-white transition-colors" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="mailto:contacto@cuatrotrazos.com" class="text-white/80 hover:text-white transition-colors" aria-label="Email">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <p class="text-sm text-white/80 mb-2">
+            <a href="mailto:contacto@cuatrotrazos.com" class="hover:text-white transition-colors">contacto@cuatrotrazos.com</a>
+          </p>
+          <p class="text-sm text-white/80">Santiago, Chile</p>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p class="text-xs text-white/80">© 2026 - 2027 Cuatro Trazos. Todos los derechos reservados. diseñado por <a href="https://funnelatf.cl" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">funnelatf.cl</a></p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="text-xs text-white/80 hover:text-white transition-colors">Política de privacidad</a>
+          <a href="#" class="text-xs text-white/80 hover:text-white transition-colors">Términos de uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a id="whatsapp-button" href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+    <div class="whatsapp-float-content">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004c-1.052 0-2.082.398-2.847 1.12-.735.71-1.14 1.656-1.14 2.656 0 1.064.415 2.07 1.168 2.82.748.749 1.75 1.155 2.819 1.155h.002c1.048 0 2.079-.396 2.847-1.12.735-.71 1.14-1.656 1.14-2.656 0-1.064-.415-2.07-1.168-2.82-.749-.749-1.75-1.155-2.819-1.155M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0m0 23.25C5.9 23.25.75 18.1.75 12S5.9.75 12 .75 23.25 5.9 23.25 12 18.1 23.25 12 23.25"/>
+      </svg>
+      <span class="whatsapp-float-text">Hablemos</span>
+    </div>
+  </a>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
