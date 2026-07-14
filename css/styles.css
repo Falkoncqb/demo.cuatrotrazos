@@ -96,7 +96,7 @@ body {
   /* Móvil: fondo café sólido siempre visible */
   @media (max-width: 1023px) {
     #navbar {
-      background-color: #C8A98F !important;
+      background-color: #888888 !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
       height: 70px !important;
@@ -119,11 +119,12 @@ body {
     }
     
     .logo-image {
-      max-height: 50px !important;
+      max-height: 65px !important;
+      max-width: 230px !important;
     }
 
     #navbar.navbar-scrolled {
-      background-color: #B08F73 !important;
+      background-color: #5A5A5A !important;
       border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
       box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
     }
@@ -138,7 +139,7 @@ body {
       width: 48px !important;
       height: 48px !important;
       border-radius: 10px !important;
-      color: #B08F73 !important;
+      color: #5A5A5A !important;
       background-color: #FFFFFF !important;
       border: 2px solid #FFFFFF !important;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
@@ -171,14 +172,14 @@ body {
     }
   }
 
-/* Desktop: transparente al inicio, café tenue al hacer scroll */
+/* Desktop: gris tenue al inicio, gris grafito al hacer scroll */
 @media (min-width: 1024px) {
   #navbar {
-    background-color: transparent !important;
+    background-color: #888888 !important;
   }
 
   #navbar.navbar-scrolled {
-    background-color: rgba(176, 143, 115, 0.92) !important;
+    background-color: rgba(90, 90, 90, 0.92) !important;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
@@ -187,13 +188,13 @@ body {
 
   /* Páginas internas: navbar con fondo café tenue siempre visible */
   #navbar.page-navbar {
-    background-color: #C8A98F !important;
+    background-color: #888888 !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.25) !important;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08) !important;
   }
 
   #navbar.page-navbar.navbar-scrolled {
-    background-color: #B08F73 !important;
+    background-color: #5A5A5A !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.35) !important;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12) !important;
   }
@@ -271,7 +272,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: var(--accent);       /* #C8A98F café tenue */
+  background-color: #5A5A5A;       /* gris grafito */
   color: #FFFFFF;
   font-size: 0.875rem;
   font-weight: 600;
@@ -286,19 +287,19 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-hover);  /* #B08F73 café oscuro */
+  background-color: #4A4A4A;  /* gris grafito oscuro */
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(200, 169, 143, 0.3);
+  box-shadow: 0 8px 24px rgba(90, 90, 90, 0.3);
 }
 
 /* Botón HABLEMOS de la navbar — café con letras blancas */
 .btn-navbar {
-  background-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
   color: #FFFFFF !important;
 }
 
 .btn-navbar:hover {
-  background-color: #B08F73 !important;
+  background-color: #4A4A4A !important;
 }
 
 /* Efecto lift para botones con clase btn-lift */
@@ -311,7 +312,7 @@ body {
 
 .btn-lift:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(200, 169, 143, 0.25);
+  box-shadow: 0 8px 24px rgba(90, 90, 90, 0.25);
 }
 
 /* ------------------------------------------------------------
@@ -536,8 +537,8 @@ button:focus-visible {
    ------------------------------------------------------------ */
 #gallery-prev,
 #gallery-next {
-  background-color: #C8A98F !important;
-  border-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
+  border-color: #5A5A5A !important;
   color: #FFFFFF !important;
 }
 
@@ -548,22 +549,22 @@ button:focus-visible {
 
 #gallery-prev:hover,
 #gallery-next:hover {
-  background-color: #B08F73 !important;
-  border-color: #B08F73 !important;
+  background-color: #4A4A4A !important;
+  border-color: #4A4A4A !important;
 }
 
 /* ------------------------------------------------------------
    14. FOOTER — Forzar fondo café tenue
    ------------------------------------------------------------ */
 footer {
-  background-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
 }
 
 /* ------------------------------------------------------------
    15. BOTÓN "HABLEMOS DE TU PROYECTO" — Café sólido, letras blancas
    ------------------------------------------------------------ */
 .js-hablemos {
-  background-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
   color: #FFFFFF !important;
   border: none !important;
 }
@@ -573,15 +574,15 @@ footer {
 }
 
 .js-hablemos:hover {
-  background-color: #B08F73 !important;
+  background-color: #4A4A4A !important;
   color: #FFFFFF !important;
 }
 
 /* ------------------------------------------------------------
-   16. BOTÓN "VER TODOS LOS PROYECTOS" — Café sólido, letras blancas
+   16. BOTÓN "VER TODOS LOS PROYECTOS" — Gris grafito sólido, letras blancas
    ------------------------------------------------------------ */
 .js-ver-todos {
-  background-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
   color: #FFFFFF !important;
   border: none !important;
 }
@@ -591,7 +592,7 @@ footer {
 }
 
 .js-ver-todos:hover {
-  background-color: #B08F73 !important;
+  background-color: #4A4A4A !important;
   color: #FFFFFF !important;
 }
 
@@ -678,7 +679,8 @@ footer {
 }
 
 .logo-image {
-  max-height: 65px;
+  max-height: 88px;
+  max-width: 300px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -688,7 +690,8 @@ footer {
 /* Desktop: logo más grande y prominente */
 @media (min-width: 1024px) {
   .logo-image {
-    max-height: 90px;
+    max-height: 110px;
+    max-width: 400px;
   }
   
   .logo-link {
@@ -700,6 +703,7 @@ footer {
 @media (max-width: 1023px) {
   .logo-image {
     max-height: 55px;
+    max-width: 190px;
   }
   
   .logo-link {
@@ -819,7 +823,8 @@ footer {
 }
 
 .footer-logo-image {
-  max-height: 120px;
+  max-height: 160px;
+  max-width: 520px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -829,14 +834,16 @@ footer {
 /* Responsivo: ajustar tamaño en móvil */
 @media (max-width: 768px) {
   .footer-logo-image {
-    max-height: 100px;
+    max-height: 130px;
+    max-width: 460px;
   }
 }
 
 /* Muy pequeño: ajustar más */
 @media (max-width: 480px) {
   .footer-logo-image {
-    max-height: 85px;
+    max-height: 110px;
+    max-width: 400px;
   }
 }
 
@@ -845,12 +852,12 @@ footer {
    ============================================================ */
 
 .footer-cta-button {
-  background-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
   color: #FFFFFF !important;
 }
 
 .footer-cta-button:hover {
-  background-color: #B08F73 !important;
+  background-color: #4A4A4A !important;
 }
 
 
@@ -859,18 +866,20 @@ footer {
    ============================================================ */
 
 .mobile-menu-header {
-  background-color: #C8A98F !important;
+  background-color: #5A5A5A !important;
 }
 
 .mobile-menu-logo {
-  max-height: 50px;
+  max-height: 65px;
+  max-width: 280px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
 .mobile-menu-footer-logo {
-  max-height: 70px;
+  max-height: 80px;
+  max-width: 300px;
   width: auto;
   object-fit: contain;
   display: block;

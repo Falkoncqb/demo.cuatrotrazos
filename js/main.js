@@ -250,31 +250,6 @@
   }, { passive: true });
 })();
 
-/* ------------------------------------------------------------
-   6. TOAST "SABER MÁS" — Globo de mensaje al hacer clic
-   ------------------------------------------------------------ */
-(function initSaberMasToast() {
-  const saberMasLinks = document.querySelectorAll('.js-saber-mas');
-  const toast = document.getElementById('saber-mas-toast');
-  if (!saberMasLinks.length || !toast) return;
-
-  let hideTimeout = null;
-
-  function showToast(e) {
-    e.preventDefault();
-    toast.classList.add('visible');
-
-    if (hideTimeout) clearTimeout(hideTimeout);
-    hideTimeout = setTimeout(() => {
-      toast.classList.remove('visible');
-    }, 2800);
-  }
-
-  saberMasLinks.forEach(link => {
-    link.addEventListener('click', showToast);
-  });
-})();
-
+/* Nota: Los enlaces SABER MÁS ahora navegan directamente a proyectos.html */
 /* Nota: Los botones HABLEMOS ahora abren WhatsApp directamente sin toast */
-
 /* Nota: Los botones VER TODOS ahora tienen funcionalidad diferente */
