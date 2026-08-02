@@ -5,8 +5,8 @@
 // Estructura de proyectos - Se actualiza manualmente o dinámicamente
 const proyectos = [
   {
-    nombre: 'Alba',
-    descripcion: 'Proyecto residencial de arquitectura moderna con diseño contemporáneo.',
+    nombre: 'Proyecto Alba | Diseño e implementación',
+    descripcion: 'Interiorismo: Principalmente se busca aportar identidad moderna y lúdica donde se permita vivir de forma libre y poco estructurada, creando espacios multifuncionales ideales para cada uno de los integrantes de esta familia.',
     imagenes: [
       'Proyectos/Alba/6V4A8195-HDR.jpg',
       'Proyectos/Alba/6V4A8209-HDR.jpg',
@@ -21,8 +21,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Atenas',
-    descripcion: 'Diseño de espacios con influencia clásica y elementos contemporáneos.',
+    nombre: 'Proyecto Atenas | Diseño e implementación',
+    descripcion: 'Mobiliario: Este proyecto nace a raíz de la necesidad de crear un mueble que tenga la capacidad de unir, living comedor y cocina, este se transforma en el punto focal de la casa.',
     imagenes: [
       'Proyectos/Atenas/WhatsApp Image 2026-07-03 at 10.44.24 AM.jpeg',
       'Proyectos/Atenas/WhatsApp Image 2026-07-03 at 10.44.24 AM (1).jpeg',
@@ -31,8 +31,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Augusto Legia',
-    descripcion: 'Proyecto de remodelación integral con énfasis en funcionalidad.',
+    nombre: 'Proyecto Augusto Legia | Diseño e implementación',
+    descripcion: 'Remodelación de cocina: Para ampliar la cocina fue necesario eliminar el dormitorio y baño de servicio, esto nos permite incorporar una isla y desayunador, permitiendo que el transito sea más fluido. El estilo utilizado es Farmhouse, fusionando el encanto campestre con la funcionalidad moderna.',
     imagenes: [
       'Proyectos/Augusto Legia/WhatsApp Image 2026-07-03 at 10.44.23 AM.jpeg',
       'Proyectos/Augusto Legia/WhatsApp Image 2026-07-03 at 10.44.23 AM (1).jpeg',
@@ -41,8 +41,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Club Hipico',
-    descripcion: 'Diseño de espacios para entretenimiento y recreación.',
+    nombre: 'Proyecto Club Hipico | Diseño e implementación',
+    descripcion: 'Remodelación de cocina: Diseño de cocina moderna con líneas limpias y funcionales, integrando materiales de acabado mate y buena iluminación para crear un espacio práctico y estéticamente cálido.',
     imagenes: [
       'Proyectos/club hipico/6V4A7903-HDR.jpg',
       'Proyectos/club hipico/6V4A7906-HDR.jpg',
@@ -55,8 +55,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Huertos Familiares',
-    descripcion: 'Proyecto de diseño paisajístico y espacios verdes.',
+    nombre: 'Proyecto Huertos Familiares | Diseño e implementación',
+    descripcion: 'Remodelación de cocina: Esta cocina es una construcción nueva, donde el principal foco es logar un diseño contemporáneo, utilizando la idea de que cada cosa tiene su lugar.',
     imagenes: [
       'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.25 AM.jpeg',
       'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.25 AM (1).jpeg',
@@ -66,8 +66,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Llico',
-    descripcion: 'Proyecto residencial con vista al paisaje natural.',
+    nombre: 'Proyecto Llico | Diseño e implementación',
+    descripcion: 'Interiorismo: En este departamento Airbnb, el estilo era primordial, debía ser atractivo y funcional para los huéspedes y atemporal para el dueño, así no se ve condicionado por las modas pasajeras.',
     imagenes: [
       'Proyectos/Llico/WhatsApp Image 2026-07-03 at 10.56.39 AM.jpeg',
       'Proyectos/Llico/WhatsApp Image 2026-07-03 at 10.56.40 AM.jpeg',
@@ -76,8 +76,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Parque Villarrica',
-    descripcion: 'Diseño de espacios públicos y áreas verdes.',
+    nombre: 'Proyecto Parque Villarrica | Diseño e implementación',
+    descripcion: 'Remodelación: Inicialmente comenzamos con un dormitorio, este se transformó en un multiespacio, oficina, sala de trabajo para hobby y closet. todo debía estar almacenado para no generar caos. Los dueños quedaron fascinados y terminamos remodelando una sala de niño, dormitorio de adolescente y quincho.',
     imagenes: [
       'Proyectos/Parque Villarrica/WhatsApp Image 2026-07-03 at 10.56.40 AM.jpeg',
       'Proyectos/Parque Villarrica/WhatsApp Image 2026-07-03 at 10.56.40 AM (1).jpeg',
@@ -90,8 +90,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Pocuro',
-    descripcion: 'Proyecto de arquitectura residencial contemporánea.',
+    nombre: 'Proyecto Pocuro | Diseño e implementación',
+    descripcion: 'Interiorismo: En este departamento Airbnb, el estilo era primordial, debía ser atractivo y funcional para los huéspedes y atemporal para el dueño, así no se ve condicionado por las modas pasajeras.',
     imagenes: [
       'Proyectos/Pocuro/6V4A8297-HDR.jpg',
       'Proyectos/Pocuro/6V4A8308-HDR.jpg',
@@ -102,8 +102,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'San Anselmo',
-    descripcion: 'Diseño de vivienda con integración al entorno natural.',
+    nombre: 'Proyecto San Anselmo | Diseño e implementación',
+    descripcion: 'Paisajismo: En este patio, debimos unificar distintos espacios, quincho, patio interior, piscina y fogón, los tonos oscuros e iluminación son los protagonistas del proyecto.',
     imagenes: [
       'Proyectos/San Anselmo/WhatsApp Image 2026-07-03 at 10.56.42 AM.jpeg',
       'Proyectos/San Anselmo/WhatsApp Image 2026-07-03 at 10.56.42 AM (1).jpeg',
@@ -115,8 +115,8 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Santa Monica',
-    descripcion: 'Proyecto de remodelación con estilo moderno y funcional.',
+    nombre: 'Proyecto Santa Mónica | Diseño e implementación',
+    descripcion: 'Remodelación de cocina: Se propone una cocina de concepto abierto optimizando el almacenamiento. El estilo utilizado es clásico contemporáneo, donde prevalecen las líneas simples e iluminación natural creando espacios atemporales.',
     imagenes: [
       'Proyectos/santa monica/6V4A7903-HDR.jpg',
       'Proyectos/santa monica/6V4A7906-HDR.jpg',

@@ -45,30 +45,31 @@ Estudio de arquitectura y diseño de ambientes con sede en Santiago, Chile. Siti
 
 ```
 Cuatrotrazos/
-├── mockup/                          # Código fuente del sitio web
-│   ├── index.html                   # Página principal (Home)
-│   ├── proyectos.html               # Galería de proyectos
-│   ├── sobre-nosotros.html          # Página institucional
-│   ├── css/
-│   │   ├── styles.css               # Estilos globales (~900 líneas)
-│   │   └── proyectos.css            # Estilos específicos de galería
-│   ├── js/
-│   │   ├── main.js                  # Lógica principal (navbar, scroll, parallax, menú móvil)
-│   │   └── proyectos.js             # Gestión de galerías, lightbox, renderizado dinámico
-│   ├── assets/                      # Imágenes del sitio (logo, hero, iconos, oficinas)
-│   └── Proyectos/                   # Fotografías de cada proyecto por carpeta
-│       ├── Alba/
-│       ├── Atenas/
-│       ├── Augusto Legia/
-│       ├── club hipico/
-│       ├── huertos familiares/
-│       ├── Llico/
-│       ├── Parque Villarrica/
-│       ├── Pocuro/
-│       ├── San Anselmo/
-│       └── santa monica/
+├── index.html                       # Página principal (Home)
+├── proyectos.html                   # Galería de proyectos
+├── sobre-nosotros.html              # Página institucional
+├── css/
+│   ├── styles.css                   # Estilos globales (~900 líneas)
+│   └── proyectos.css                # Estilos específicos de galería
+├── js/
+│   ├── main.js                      # Lógica principal (navbar, scroll, parallax, menú móvil)
+│   └── proyectos.js                 # Gestión de galerías, lightbox, renderizado dinámico
+├── assets/                          # Imágenes del sitio (logo, hero, iconos, oficinas)
+├── Proyectos/                       # Fotografías de cada proyecto por carpeta
+│   ├── Alba/
+│   ├── Atenas/
+│   ├── Augusto Legia/
+│   ├── club hipico/
+│   ├── huertos familiares/
+│   ├── Llico/
+│   ├── Parque Villarrica/
+│   ├── Pocuro/
+│   ├── San Anselmo/
+│   └── santa monica/
 ├── OPTIMIZACIONES_REALIZADAS.md    # Registro de optimizaciones
 ├── REVISION_FINDINGS.md            # Hallazgos de revisión técnica
+├── _Portafolio_CuatroTrazos.pdf    # Portafolio en PDF
+├── cuatro-trazos.zip               # Backup del proyecto
 └── README.md                        # Este archivo
 ```
 
@@ -167,7 +168,7 @@ Cuatrotrazos/
 ## Cómo Ejecutar Localmente
 
 1. Clonar o descargar el repositorio
-2. Abrir el archivo `mockup/index.html` en cualquier navegador moderno
+2. Abrir el archivo `index.html` en cualquier navegador moderno
 3. No requiere servidor ni dependencias adicionales (todo via CDN)
 
 ---
