@@ -59,7 +59,6 @@ Cuatrotrazos/
 │   ├── Alba/
 │   ├── Atenas/
 │   ├── Augusto Legia/
-│   ├── club hipico/
 │   ├── huertos familiares/
 │   ├── Llico/
 │   ├── Parque Villarrica/
@@ -87,17 +86,16 @@ Cuatrotrazos/
 
 ### 2. Proyectos (`proyectos.html`)
 - Galería dinámica renderizada desde JavaScript
-- **10 proyectos** con título y descripción detallada:
+- **9 proyectos** con título y descripción detallada:
   1. **Proyecto Alba** — Interiorismo moderno y lúdico, espacios multifuncionales
   2. **Proyecto Atenas** — Mobiliario focal que une living, comedor y cocina
   3. **Proyecto Augusto Legia** — Remodelación cocina estilo Farmhouse con isla y desayunador
-  4. **Proyecto Club Hipico** — Cocina moderna con líneas limpias y materiales mate
-  5. **Proyecto Huertos Familiares** — Cocina nueva contemporánea, cada cosa en su lugar
-  6. **Proyecto Llico** — Interiorismo Airbnb atractivo, funcional y atemporal
-  7. **Proyecto Parque Villarrica** — Remodelación multiespacio: dormitorio a oficina, sala hobby, closet
-  8. **Proyecto Pocuro** — Interiorismo Airbnb atractivo, funcional y atemporal
-  9. **Proyecto San Anselmo** — Paisajismo unificando quincho, piscina, patio y fogón
-  10. **Proyecto Santa Mónica** — Cocina concepto abierto, estilo clásico contemporáneo
+  4. **Proyecto Huertos Familiares** — Cocina nueva contemporánea, cada cosa en su lugar
+  5. **Proyecto Llico** — Interiorismo Airbnb atractivo, funcional y atemporal
+  6. **Proyecto Parque Villarrica** — Remodelación multiespacio: dormitorio a oficina, sala hobby, closet
+  7. **Proyecto Pocuro** — Interiorismo Airbnb atractivo, funcional y atemporal
+  8. **Proyecto San Anselmo** — Paisajismo unificando quincho, piscina, patio y fogón
+  9. **Proyecto Santa Mónica** — Cocina concepto abierto, estilo clásico contemporáneo
 - Lightbox con navegación por teclado (flechas + ESC)
 - Galería expandible "Ver más / Ver menos"
 

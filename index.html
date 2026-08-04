@@ -48,7 +48,14 @@
   <!-- Navigation -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-      <div class="flex items-center justify-center h-20 lg:h-24">
+      <div class="flex items-center justify-between h-20 lg:h-24">
+        <!-- Logo -->
+        <a href="#inicio" class="flex-shrink-0 z-50 lg:hidden">
+          <div class="bg-white/90 rounded-lg px-2 py-1">
+            <img src="assets/logo1.png" alt="Cuatro Trazos" class="h-10 lg:h-12 w-auto object-contain">
+          </div>
+        </a>
+
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center gap-8 xl:gap-10">
           <a href="#inicio" class="text-sm font-medium text-soft-black link-underline tracking-wide">INICIO</a>
@@ -84,8 +91,8 @@
 
     <!-- Cabecera del menú -->
     <div class="mobile-menu-header flex items-center justify-between px-5 py-4 border-b border-white/20 flex-shrink-0 bg-[#5A5A5A]">
-      <div class="flex items-center gap-2">
-        <img src="assets/logo3.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="mobile-menu-logo">
+      <div class="flex items-center gap-2 bg-white/90 rounded-lg px-2 py-1">
+        <img src="assets/logo1.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="mobile-menu-logo">
       </div>
       <button id="mobile-menu-close" class="flex items-center justify-center w-8 h-8 rounded-lg text-white bg-white/15 border border-white/25 active:bg-white/25 transition-colors" aria-label="Cerrar menú">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -127,7 +134,9 @@
     <div class="px-5 py-6 border-t border-white/20 flex-shrink-0 space-y-4">
       <!-- Logo en el pie -->
       <div class="flex justify-center mb-4">
-        <img src="assets/logo3.png" alt="Cuatro Trazos" class="mobile-menu-footer-logo">
+        <div class="bg-white/90 rounded-lg px-3 py-2">
+          <img src="assets/logo1.png" alt="Cuatro Trazos" class="mobile-menu-footer-logo">
+        </div>
       </div>
       
       <!-- Botón HABLEMOS -->
@@ -149,96 +158,14 @@
 
     <!-- Capa parallax: imagen de fondo que se mueve más lento que el scroll -->
     <div class="parallax-bg" data-parallax-speed="0.6" aria-hidden="true"
-         style="background-image: url('assets/1.jpg.jpeg');"></div>
+         style="background-image: url('assets/portada1.jpg');"></div>
 
-    <!-- Overlay: capa sólida base + gradiente para legibilidad del texto -->
-    <div class="absolute inset-0 z-10" style="background: rgba(250, 248, 245, 0.88);"></div>
-    <div class="absolute inset-0 z-10" style="background: linear-gradient(to right, rgba(250,248,245,0.98) 0%, rgba(250,248,245,0.96) 20%, rgba(250,248,245,0.88) 50%, rgba(250,248,245,0.55) 100%);"></div>
     
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10 w-full relative z-20">
       <div class="flex flex-col items-center">
-        <!-- Content -->
-        <div class="w-full lg:w-[55%] xl:w-[50%] bg-cream/60 backdrop-blur-sm rounded-2xl p-5 sm:p-6 lg:p-8">
-          <div class="hero-logo-container reveal mt-4 mb-6">
-            <img src="assets/logo3.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="hero-logo-img">
-          </div>
-          <div class="flex items-start gap-3 mb-8 reveal" style="--i:1;">
-            <span class="flex-shrink-0 mt-1 w-1 h-12 rounded-full" style="background-color: #C8A98F;"></span>
-            <p class="text-base sm:text-lg lg:text-xl font-medium leading-relaxed" style="color: #3D3530;">
-              Arquitectura y diseño de ambientes para
-              <strong class="font-semibold" style="color: #1A1A1A;">hogares que inspiran</strong>
-              y propiedades que
-              <strong class="font-semibold" style="color: #1A1A1A;">generan valor.</strong>
-            </p>
-          </div>
-          <a href="#servicios" class="inline-flex items-center gap-2 px-7 py-3.5 text-white text-sm font-semibold tracking-wide rounded-full btn-lift btn-navbar transition-colors reveal" style="--i:2;">
-            CONOCE NUESTROS SERVICIOS
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 8h10M9 4l4 4-4 4"/>
-            </svg>
-          </a>
-
-          <!-- Trust Bar -->
-          <div class="trust-bar mt-12 pt-8 border-t border-warm-taupe/30 reveal" style="--i:3;">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-
-              <!-- Item 1 -->
-              <div class="trust-item flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-xl px-4 py-3 border border-warm-taupe/20">
-                <div class="trust-icon flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background-color: rgba(200,169,143,0.15);">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="8" r="7"/>
-                    <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-soft-black tracking-wider leading-tight uppercase">+10 Años</p>
-                  <p class="text-xs text-warm-gray leading-tight">de experiencia</p>
-                </div>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="trust-item flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-xl px-4 py-3 border border-warm-taupe/20">
-                <div class="trust-icon flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background-color: rgba(200,169,143,0.15);">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-soft-black tracking-wider leading-tight uppercase">Atención Personalizada</p>
-                  <p class="text-xs text-warm-gray leading-tight">cercana y dedicada</p>
-                </div>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="trust-item flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-xl px-4 py-3 border border-warm-taupe/20">
-                <div class="trust-icon flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background-color: rgba(200,169,143,0.15);">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-soft-black tracking-wider leading-tight uppercase">Calidad y Excelencia</p>
-                  <p class="text-xs text-warm-gray leading-tight">en cada etapa del proyecto</p>
-                </div>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="trust-item flex items-center gap-4 bg-white/60 backdrop-blur-sm rounded-xl px-4 py-3 border border-warm-taupe/20">
-                <div class="trust-icon flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center" style="background-color: rgba(200,169,143,0.15);">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                  </svg>
-                </div>
-                <div>
-                  <p class="text-xs font-bold text-soft-black tracking-wider leading-tight uppercase">Compromiso y Confianza</p>
-                  <p class="text-xs text-warm-gray leading-tight">tu tranquilidad es nuestra prioridad</p>
-                </div>
-              </div>
-
-            </div>
+        <div class="w-full max-w-2xl reveal -mt-[7.5rem] lg:-mt-24">
+          <div class="bg-white/25 rounded-2xl p-6 sm:p-8 border border-white/20">
+            <img src="assets/logo1.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="w-full h-auto">
           </div>
         </div>
       </div>
@@ -325,7 +252,7 @@
         <!-- Service 4 -->
         <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:3;">
           <div class="img-zoom aspect-[16/10]">
-            <img src="assets/5.jpeg" alt="Diseño de local comercial" class="w-full h-full object-cover">
+            <img src="assets/localescomerciales.png" alt="Diseño de local comercial" class="w-full h-full object-cover">
           </div>
           <div class="p-6 lg:p-7">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
@@ -370,7 +297,7 @@
         <!-- Service 6: Diseño de Oficinas -->
         <article class="group bg-cream rounded-xl overflow-hidden border border-divider hover:border-warm-taupe transition-colors duration-300 reveal" style="--i:5;">
           <div class="img-zoom aspect-[16/10]">
-            <img src="assets/oficinas.jpg" alt="Diseño de Oficinas" class="w-full h-full object-cover">
+            <img src="assets/5.jpeg" alt="Diseño de Oficinas" class="w-full h-full object-cover">
           </div>
           <div class="p-6 lg:p-7">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C8A98F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="mb-4">
@@ -405,7 +332,7 @@
             Nuestro compromiso,<br>tu tranquilidad.
           </h2>
           <p class="text-lg text-warm-gray leading-relaxed">
-            Te acompañamos en cada etapa del proceso con profesionalismo, transparencia y dedicación. Nos encargamos de que todo funcione para que vos solo disfrutes el resultado.
+            Te acompañamos en cada etapa con profesionalismo, transparencia y dedicación. Nos encargamos de que todo funcione para que vos solo disfrutes el resultado.
           </p>
         </div>
 
@@ -486,7 +413,7 @@
 
         <!-- Proyecto 1: Alba -->
         <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:0;">
-          <img src="Proyectos/Alba/6V4A8195-HDR.jpg" alt="Proyecto Alba" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <img src="Proyectos/Alba/6V4A8248-HDR.jpg" alt="Proyecto Alba" class="w-full h-[280px] sm:h-[350px] object-cover">
           <div class="p-4 flex items-center justify-between">
             <h3 class="font-serif text-lg font-medium text-soft-black">Alba</h3>
             <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
@@ -526,23 +453,9 @@
           </div>
         </a>
 
-        <!-- Proyecto 4: Club Hipico -->
-        <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:3;">
-          <img src="Proyectos/club hipico/6V4A7903-HDR.jpg" alt="Proyecto Club Hipico" class="w-full h-[280px] sm:h-[350px] object-cover">
-          <div class="p-4 flex items-center justify-between">
-            <h3 class="font-serif text-lg font-medium text-soft-black">Club Hípico</h3>
-            <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
-              VER MÁS
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:translate-x-1">
-                <path d="M3 8h10M9 4l4 4-4 4"/>
-              </svg>
-            </span>
-          </div>
-        </a>
-
-        <!-- Proyecto 5: Huertos Familiares -->
+        <!-- Proyecto 4: Huertos Familiares -->
         <a href="proyectos.html" class="gallery-item group w-[85vw] sm:w-[60vw] lg:w-[500px] rounded-xl overflow-hidden img-zoom reveal flex-shrink-0 block border border-divider hover:border-warm-taupe transition-all duration-300 bg-white shadow-sm hover:shadow-md" style="--i:4;">
-          <img src="Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.25 AM.jpeg" alt="Proyecto Huertos Familiares" class="w-full h-[280px] sm:h-[350px] object-cover">
+          <img src="Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.26 AM (2).jpeg" alt="Proyecto Huertos Familiares" class="w-full h-[280px] sm:h-[350px] object-cover">
           <div class="p-4 flex items-center justify-between">
             <h3 class="font-serif text-lg font-medium text-soft-black">Huertos Familiares</h3>
             <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-warm-taupe tracking-wide">
@@ -695,7 +608,9 @@
         <!-- Logo & Tagline -->
         <div class="reveal">
           <a href="#inicio" class="flex items-center footer-logo-link">
-            <img src="assets/logo3.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="footer-logo-image">
+            <div class="bg-white/90 rounded-lg px-3 py-2">
+              <img src="assets/logo1.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="footer-logo-image">
+            </div>
           </a>
         </div>
 
@@ -737,7 +652,7 @@
       </div>
 
       <div class="border-t border-white/20 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-white/80">© 2026 - 2027 Cuatro Trazos. Todos los derechos reservados. diseñado por <a href="https://funnelatf.cl" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">funnelatf.cl</a></p>
+        <p class="text-xs text-white/80">© 2026 - 2027 Cuatro Trazos. Todos los derechos reservados. diseñado por <a href="https://fusionia.cl" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">fusionia.cl</a></p>
         <div class="flex items-center gap-6">
           <a href="#" class="text-xs text-white/80 hover:text-white transition-colors">Política de privacidad</a>
           <a href="#" class="text-xs text-white/80 hover:text-white transition-colors">Términos de uso</a>

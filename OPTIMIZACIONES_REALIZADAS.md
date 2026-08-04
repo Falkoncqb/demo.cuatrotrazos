@@ -134,7 +134,7 @@ Se realizó una revisión completa del proyecto Cuatro Trazos, identificando y c
 - **Separación ajustada** entre links y botón CTA (`ml-8`)
 
 ### Hero Section con Logo
-- **Reemplazo del título de texto** por el logo `assets/logo3.png`
+- **Reemplazo del título de texto** por el logo `assets/logo1.png`
 - **Fondo gris metálico** con gradiente y bordes redondeados para destacar
 - **Tamaño adaptativo**: 320px (móvil) / 400px (desktop)
 - **Logo centrado** en el centro de la web

@@ -8,10 +8,10 @@ const proyectos = [
     nombre: 'Proyecto Alba | Diseño e implementación',
     descripcion: 'Interiorismo: Principalmente se busca aportar identidad moderna y lúdica donde se permita vivir de forma libre y poco estructurada, creando espacios multifuncionales ideales para cada uno de los integrantes de esta familia.',
     imagenes: [
+      'Proyectos/Alba/6V4A8248-HDR.jpg',
       'Proyectos/Alba/6V4A8195-HDR.jpg',
       'Proyectos/Alba/6V4A8209-HDR.jpg',
       'Proyectos/Alba/6V4A8215-HDR.jpg',
-      'Proyectos/Alba/6V4A8248-HDR.jpg',
       'Proyectos/Alba/6V4A8254-HDR.jpg',
       'Proyectos/Alba/6V4A8269-HDR.jpg',
       'Proyectos/Alba/6V4A8273-HDR.jpg',
@@ -41,28 +41,14 @@ const proyectos = [
     ]
   },
   {
-    nombre: 'Proyecto Club Hipico | Diseño e implementación',
-    descripcion: 'Remodelación de cocina: Diseño de cocina moderna con líneas limpias y funcionales, integrando materiales de acabado mate y buena iluminación para crear un espacio práctico y estéticamente cálido.',
-    imagenes: [
-      'Proyectos/club hipico/6V4A7903-HDR.jpg',
-      'Proyectos/club hipico/6V4A7906-HDR.jpg',
-      'Proyectos/club hipico/6V4A7909-HDR.jpg',
-      'Proyectos/club hipico/6V4A7923-HDR.jpg',
-      'Proyectos/club hipico/6V4A7927-HDR.jpg',
-      'Proyectos/club hipico/6V4A7938-HDR.jpg',
-      'Proyectos/club hipico/6V4A7960-HDR.jpg',
-      'Proyectos/club hipico/6V4A7969-HDR.jpg',
-    ]
-  },
-  {
     nombre: 'Proyecto Huertos Familiares | Diseño e implementación',
     descripcion: 'Remodelación de cocina: Esta cocina es una construcción nueva, donde el principal foco es logar un diseño contemporáneo, utilizando la idea de que cada cosa tiene su lugar.',
     imagenes: [
+      'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.26 AM (2).jpeg',
       'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.25 AM.jpeg',
       'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.25 AM (1).jpeg',
       'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.26 AM.jpeg',
       'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.26 AM (1).jpeg',
-      'Proyectos/huertos familiares/WhatsApp Image 2026-07-03 at 10.44.26 AM (2).jpeg',
     ]
   },
   {
