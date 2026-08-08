@@ -475,7 +475,7 @@ body {
   z-index: 1;
 }
 
-/* En móvil: desactivar parallax y mostrar imagen completa */
+/* En móvil: desactivar parallax y ajustar imagen al centro superior */
 @media (max-width: 767px) {
   #inicio {
     background-color: #F5F0EB;
@@ -483,8 +483,8 @@ body {
   .parallax-bg {
     inset: 0;
     transform: none !important;
-    background-size: contain;
-    background-position: center center;
+    background-size: cover;
+    background-position: center top;
     background-repeat: no-repeat;
   }
   .parallax-deco {
