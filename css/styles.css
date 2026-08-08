@@ -475,7 +475,7 @@ body {
   z-index: 1;
 }
 
-/* En móvil: desactivar parallax y ajustar imagen al centro superior */
+/* En móvil: desactivar parallax y usar portada1 con logo centrado */
 @media (max-width: 767px) {
   #inicio {
     background-color: #F5F0EB;
@@ -483,6 +483,7 @@ body {
   .parallax-bg {
     inset: 0;
     transform: none !important;
+    background-image: url('assets/portada1.jpg') !important;
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;

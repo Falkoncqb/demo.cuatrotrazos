@@ -153,11 +153,18 @@
   <div id="mobile-menu-backdrop" class="mobile-menu-backdrop fixed inset-0 bg-black/30 backdrop-blur-[2px] z-[9997] lg:hidden opacity-0 invisible transition-all duration-300" aria-hidden="true"></div>
 
   <!-- Hero Section with Background Image -->
-  <section id="inicio" class="relative min-h-screen flex items-center pt-24 lg:pt-0 overflow-hidden">
+  <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-24 lg:pt-0 overflow-hidden">
 
     <!-- Capa parallax: imagen de fondo que se mueve más lento que el scroll -->
     <div class="parallax-bg" data-parallax-speed="0.6" aria-hidden="true"
          style="background-image: url('assets/fondo2.jpg');"></div>
+
+    <!-- Mobile: caja con logo sobre portada1 -->
+    <div class="lg:hidden relative z-20 flex flex-col items-center justify-center w-full h-full px-6">
+      <div class="bg-white/75 backdrop-blur-[2px] rounded-2xl p-6 sm:p-8 border border-white/40 shadow-xl max-w-xs w-full">
+        <img src="assets/logo1.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="w-full h-auto">
+      </div>
+    </div>
 
   </section>
 
