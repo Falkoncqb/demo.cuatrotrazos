@@ -429,7 +429,7 @@ body {
 .parallax-bg {
   position: absolute;
   inset: -15% 0;           /* Reducido para evitar escalado excesivo de la imagen */
-  background-image: url('assets/fondo2.jpg');
+  background-image: url('../assets/fondo2.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -484,7 +484,7 @@ body {
   .parallax-bg {
     inset: 0;
     transform: none !important;
-    background-image: url('assets/portada1.jpg');
+    background-image: url('../assets/portada1.jpg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
