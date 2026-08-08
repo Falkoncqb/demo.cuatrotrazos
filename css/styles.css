@@ -349,25 +349,7 @@ body {
 }
 
 /* ------------------------------------------------------------
-   8. COMPONENTES — Línea Conectora de Proceso
-   ------------------------------------------------------------ */
-.process-connector::after {
-  content: '';
-  position: absolute;
-  top: 2rem;
-  left: 50%;
-  width: 100%;
-  height: 1px;
-  background: var(--divider);
-  z-index: 0;
-}
-
-.process-step:last-child .process-connector::after {
-  display: none;
-}
-
-/* ------------------------------------------------------------
-   9. COMPONENTES — Links con Subrayado Animado
+   8. COMPONENTES — Links con Subrayado Animado
    ------------------------------------------------------------ */
 .link-underline {
   position: relative;
@@ -446,12 +428,18 @@ body {
 /* Imagen de fondo del hero con parallax */
 .parallax-bg {
   position: absolute;
-  inset: -50% 0;           /* Mayor espacio para recorrido más pronunciado */
+  inset: -15% 0;           /* Reducido para evitar escalado excesivo de la imagen */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   will-change: transform;  /* Activa compositing en GPU */
   z-index: 0;
+  /* Mejorar nitidez en escalado */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  /* Forzar GPU compositing desde el estado inicial */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 /* Elemento decorativo parallax en sección contacto */

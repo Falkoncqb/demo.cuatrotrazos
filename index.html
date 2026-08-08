@@ -48,13 +48,15 @@
   <!-- Navigation -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
     <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-      <div class="flex items-center justify-between h-20 lg:h-24">
+      <div class="flex items-center h-20 lg:h-24">
         <!-- Logo -->
-        <a href="#inicio" class="flex-shrink-0 z-50 lg:hidden">
-          <div class="bg-white/90 rounded-lg px-2 py-1">
-            <img src="assets/logo1.png" alt="Cuatro Trazos" class="h-10 lg:h-12 w-auto object-contain">
-          </div>
-        </a>
+        <div class="flex-1 flex items-center">
+          <a href="#inicio" class="flex-shrink-0 z-50 lg:hidden">
+            <div class="bg-white/90 rounded-lg px-2 py-1">
+              <img src="assets/logo1.png" alt="Cuatro Trazos" class="h-10 lg:h-12 w-auto object-contain">
+            </div>
+          </a>
+        </div>
 
         <!-- Desktop Links -->
         <div class="hidden lg:flex items-center gap-8 xl:gap-10">
@@ -62,15 +64,16 @@
           <a href="#servicios" class="text-sm font-medium text-soft-black link-underline tracking-wide">SERVICIOS</a>
           <a href="proyectos.html" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROYECTOS</a>
           <a href="sobre-nosotros.html" class="text-sm font-medium text-soft-black link-underline tracking-wide">SOBRE NOSOTRAS</a>
-          <a href="#proceso" class="text-sm font-medium text-soft-black link-underline tracking-wide">PROCESO</a>
           <a href="#contacto" class="text-sm font-medium text-soft-black link-underline tracking-wide">CONTACTO</a>
         </div>
 
         <!-- CTA -->
-        <div class="hidden lg:block ml-8">
-          <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 text-white text-sm font-medium rounded-full btn-lift btn-navbar transition-colors">
-            HABLEMOS
-          </a>
+        <div class="flex-1 hidden lg:flex justify-end items-center">
+          <div class="ml-8">
+            <a href="https://wa.me/56957708200?text=Necesito%20empezar%20mi%20proyecto!" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-2.5 text-white text-sm font-medium rounded-full btn-lift btn-navbar transition-colors">
+              HABLEMOS
+            </a>
+          </div>
         </div>
 
       </div>
@@ -120,10 +123,6 @@
         <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>
         Sobre Nosotras
       </a>
-      <a href="#proceso" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 active:bg-white/20 transition-colors border-b border-white/20">
-        <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>
-        Proceso
-      </a>
       <a href="#contacto" class="mobile-link flex items-center gap-3 py-3 px-3 rounded-lg text-white font-medium text-sm hover:bg-white/10 active:bg-white/20 transition-colors">
         <span class="w-1 h-1 rounded-full flex-shrink-0 bg-white"></span>
         Contacto
@@ -158,18 +157,8 @@
 
     <!-- Capa parallax: imagen de fondo que se mueve más lento que el scroll -->
     <div class="parallax-bg" data-parallax-speed="0.6" aria-hidden="true"
-         style="background-image: url('assets/portada1.jpg');"></div>
+         style="background-image: url('assets/fondo2.jpg');"></div>
 
-    
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10 w-full relative z-20">
-      <div class="flex flex-col items-center">
-        <div class="w-full max-w-2xl reveal -mt-[10rem] lg:-mt-24">
-          <div class="bg-white/40 rounded-2xl p-6 sm:p-8 border border-white/20">
-            <img src="assets/logo1.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="w-full h-auto">
-          </div>
-        </div>
-      </div>
-    </div>
   </section>
 
   <!-- Services Section -->
@@ -323,80 +312,7 @@
   </section>
 
   <!-- Sobre Nosotras + Proceso Section -->
-  <section id="sobre-nosotras" class="py-24 lg:py-32 bg-cream">
-    <div class="max-w-[1400px] mx-auto px-6 lg:px-10">
-      <div class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
-        <!-- Left Text -->
-        <div class="w-full lg:w-[40%] reveal">
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium text-soft-black leading-[1.15] mb-6">
-            Nuestro compromiso,<br>tu tranquilidad.
-          </h2>
-          <p class="text-lg text-warm-gray leading-relaxed">
-            Te acompañamos en cada etapa con profesionalismo, transparencia y dedicación. Nos encargamos de que todo funcione para que vos solo disfrutes el resultado.
-          </p>
-        </div>
 
-        <!-- Right Steps -->
-        <div class="w-full lg:w-[60%]" id="proceso">
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 stagger-children">
-            <!-- Step 1 -->
-            <div class="relative process-step reveal" style="--i:0;">
-              <div class="process-connector relative flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full border border-divider bg-beige flex items-center justify-center mb-4 z-10 relative">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                  </svg>
-                </div>
-                <h3 class="font-serif text-lg font-medium text-soft-black mb-1">ESCUCHAMOS</h3>
-                <p class="text-sm text-warm-gray leading-snug">Entendemos tus necesidades y objetivos.</p>
-              </div>
-            </div>
-
-            <!-- Step 2 -->
-            <div class="relative process-step reveal" style="--i:1;">
-              <div class="process-connector relative flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full border border-divider bg-beige flex items-center justify-center mb-4 z-10 relative">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M12 20h9"/>
-                    <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
-                  </svg>
-                </div>
-                <h3 class="font-serif text-lg font-medium text-soft-black mb-1">DISEÑAMOS</h3>
-                <p class="text-sm text-warm-gray leading-snug">Creamos propuestas funcionales y estéticas.</p>
-              </div>
-            </div>
-
-            <!-- Step 3 -->
-            <div class="relative process-step reveal" style="--i:2;">
-              <div class="process-connector relative flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full border border-divider bg-beige flex items-center justify-center mb-4 z-10 relative">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                  </svg>
-                </div>
-                <h3 class="font-serif text-lg font-medium text-soft-black mb-1">EJECUTAMOS</h3>
-                <p class="text-sm text-warm-gray leading-snug">Coordinamos y ejecutamos con excelencia.</p>
-              </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="relative process-step reveal" style="--i:3;">
-              <div class="process-connector relative flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full border border-divider bg-beige flex items-center justify-center mb-4 z-10 relative">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                    <polyline points="9 22 9 12 15 12 15 22"/>
-                  </svg>
-                </div>
-                <h3 class="font-serif text-lg font-medium text-soft-black mb-1">ENTREGAMOS</h3>
-                <p class="text-sm text-warm-gray leading-snug">Espacios listos para que disfrutes y vivas mejor.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Projects Section -->
   <section id="proyectos" class="py-24 lg:py-32 bg-beige overflow-hidden">
