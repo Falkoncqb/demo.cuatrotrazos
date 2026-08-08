@@ -475,11 +475,17 @@ body {
   z-index: 1;
 }
 
-/* En móvil: desactivar parallax para mejor rendimiento */
+/* En móvil: desactivar parallax y mostrar imagen completa */
 @media (max-width: 767px) {
+  #inicio {
+    background-color: #F5F0EB;
+  }
   .parallax-bg {
     inset: 0;
     transform: none !important;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .parallax-deco {
     display: none;
