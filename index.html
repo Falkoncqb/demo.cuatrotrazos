@@ -7,6 +7,10 @@
   <meta name="description" content="Estudio de arquitectura y diseño de ambientes en Santiago, Chile. Transformamos espacios con diseño innovador y profesional.">
   <meta name="robots" content="index, follow">
 
+  <!-- Preload fondos: solo desktop carga escritorio.jpeg, móvil carga portada1.jpg -->
+  <link rel="preload" as="image" href="assets/escritorio.jpeg" media="(min-width: 768px)">
+  <link rel="preload" as="image" href="assets/mobil.jpeg" media="(max-width: 767px)">
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -46,7 +50,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Estilos propios (carga después de Tailwind para mayor especificidad) -->
-  <link rel="stylesheet" href="css/styles.css?v=3">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body class="font-sans antialiased">
 
@@ -162,13 +166,6 @@
 
     <!-- Capa parallax: imagen de fondo que se mueve más lento que el scroll -->
     <div class="parallax-bg" data-parallax-speed="0.6" aria-hidden="true"></div>
-
-    <!-- Mobile: caja con logo sobre portada1 -->
-    <div class="lg:hidden relative z-20 flex flex-col items-center justify-center w-full h-full px-6">
-      <div class="bg-white/75 backdrop-blur-[2px] rounded-2xl p-6 sm:p-8 border border-white/40 shadow-xl max-w-xs w-full">
-        <img src="assets/logo1.png" alt="Cuatro Trazos - Arquitectura y Diseño" class="w-full h-auto">
-      </div>
-    </div>
 
   </section>
 

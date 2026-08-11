@@ -429,7 +429,6 @@ body {
 .parallax-bg {
   position: absolute;
   inset: -15% 0;           /* Reducido para evitar escalado excesivo de la imagen */
-  background-image: url('../assets/fondo2.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -441,6 +440,13 @@ body {
   /* Forzar GPU compositing desde el estado inicial */
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+/* Desktop: fondo de escritorio optimizado */
+@media (min-width: 768px) {
+  .parallax-bg {
+    background-image: url('../assets/escritorio.jpeg');
+  }
 }
 
 /* Elemento decorativo parallax en sección contacto */
@@ -476,7 +482,7 @@ body {
   z-index: 1;
 }
 
-/* En móvil: desactivar parallax y usar portada1 con logo centrado */
+/* En móvil: desactivar parallax y usar mobil.jpeg como fondo de hero */
 @media (max-width: 767px) {
   #inicio {
     background-color: #F5F0EB;
@@ -484,7 +490,7 @@ body {
   .parallax-bg {
     inset: 0;
     transform: none !important;
-    background-image: url('../assets/portada1.jpg');
+    background-image: url('../assets/mobil.jpeg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
